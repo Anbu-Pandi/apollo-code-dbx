@@ -1,0 +1,21 @@
+.cdx-research .cdxr-ticker-band {
+  display: flex; overflow-x: auto; gap: 8px; padding: 8px 0;
+  scrollbar-width: thin; overscroll-behavior-x: contain;
+}
+.cdx-research .cdxr-ticker {
+  display: grid; grid-template-columns: auto auto; gap: 4px 12px;
+  flex: 0 0 auto; min-width: 210px; padding: 9px 12px;
+  border: 1px solid #d9e2ec; border-radius: 9px; background: #f8fafd;
+  font-family: Consolas, Monaco, monospace; font-size: 11px;
+}
+.cdx-research .cdxr-ticker.otr { border-top: 3px solid #006d77; background: #fff; }
+.cdxr-ticker-name { font-weight: 700; color: #172033; }
+.cdxr-ticker-price { font-weight: 700; color: #0b57a4; text-align: right; }
+.cdxr-ticker-change.positive { color: #1b7a3d; }
+.cdxr-ticker-change.negative { color: #c0392b; }
+.cdxr-ticker-change.neutral, .cdxr-ticker-time { color: #65758b; }
+.cdxr-ticker-time { text-align: right; font-size: 10px; }
+.cdx-research .DateInput_input { font-size: 12px; padding: 7px; }
+.cdx-research .DateInput { width: 110px; }
+[data-theme="dark"] .cdx-research .cdxr-ticker { background: #1b2635; border-color: #3c4b60; }
+[data-theme="dark"] .cdx-research .cdxr-ticker-name { color: #dce6f4; }

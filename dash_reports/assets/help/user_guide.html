@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APO Risk Intern - User Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            padding: 22px;
+        }
+        
+        .container {
+            max-width: 1350px;
+            margin: 0 auto;
+            background: white;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            overflow: visible;
+        }
+        
+        .header {
+            border-bottom: 4px solid #006D77;
+            color: #006D77;
+            padding: 22px 45px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1000;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+        
+        .header-left img {
+            height: 60px;
+        }
+        
+        .header-title {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header h1 {
+            font-size: 27px;
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        .header p {
+            font-size: 16px;
+            color: #666;
+            margin: 0;
+        }
+        
+        .header-right {
+            text-align: right;
+        }
+        
+        .support-label {
+            font-size: 15px;
+            color: #666;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .support-team {
+            font-size: 16px;
+            color: #006D77;
+            font-weight: 600;
+        }
+        
+        .support-email {
+            font-size: 15px;
+            color: #006D77;
+            text-decoration: none;
+        }
+        
+        .support-email:hover {
+            text-decoration: underline;
+        }
+        
+        .content {
+            padding: 38px 45px;
+        }
+        
+        .section {
+            margin-bottom: 42px;
+        }
+        
+        .section h2 {
+            color: #006D77;
+            font-size: 24px;
+            margin-bottom: 21px;
+            padding-bottom: 9px;
+            border-bottom: 3px solid #006D77;
+            font-weight: 600;
+        }
+        
+        .section h3 {
+            color: #006D77;
+            font-size: 20px;
+            margin-top: 27px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .highlight-box {
+            border: 2px solid #006D77;
+            border-left: 5px solid #006D77;
+            padding: 21px;
+            margin: 21px 0;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .step-box {
+            border: 2px solid #E29578;
+            border-left: 5px solid #E29578;
+            padding: 21px;
+            margin: 21px 0;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .step-box h4 {
+            color: #E29578;
+            margin-bottom: 12px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .command-list {
+            border: 2px solid #e0e0e0;
+            padding: 21px;
+            border-radius: 6px;
+            margin: 18px 0;
+        }
+        
+        .command-item {
+            padding: 15px;
+            margin: 9px 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            border-left: 5px solid #006D77;
+            font-size: 16px;
+        }
+        
+        .command-item strong {
+            color: #006D77;
+            font-size: 18px;
+        }
+        
+        .example-query {
+            border: 2px solid #83C5BE;
+            border-left: 5px solid #83C5BE;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 5px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 15px;
+        }
+        
+        .screenshot {
+            border: 2px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            margin: 21px 0;
+            border-radius: 6px;
+        }
+        
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+        
+        .screenshot-caption {
+            color: #666;
+            font-size: 15px;
+            margin-top: 9px;
+            font-style: italic;
+        }
+        
+        .arrow-indicator {
+            color: #006D77;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .tip-box {
+            border: 2px solid #006D77;
+            border-left: 5px solid #006D77;
+            padding: 18px;
+            margin: 18px 0;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .tip-box::before {
+            content: "💡 TIP: ";
+            font-weight: 600;
+            color: #006D77;
+            font-size: 18px;
+        }
+        
+        .warning-box {
+            border: 2px solid #E29578;
+            border-left: 5px solid #E29578;
+            padding: 18px;
+            margin: 18px 0;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .warning-box::before {
+            content: "⚠️ NOTE: ";
+            font-weight: 600;
+            color: #E29578;
+            font-size: 18px;
+        }
+        
+        ul {
+            margin-left: 27px;
+            margin-top: 12px;
+        }
+        
+        li {
+            margin: 9px 0;
+            font-size: 18px;
+        }
+        
+        ol {
+            margin-left: 27px;
+            margin-top: 12px;
+        }
+        
+        ol li {
+            margin: 9px 0;
+            font-size: 18px;
+        }
+        
+        .footer {
+            padding: 24px;
+            text-align: center;
+            color: #666;
+            border-top: 2px solid #ddd;
+            font-size: 15px;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        a {
+            color: #006D77;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/assets/images/marketanalytics-color.png" alt="APO Risk Intern">
+                <div class="header-title">
+                    <h1>APO Risk Intern</h1>
+                    <p>Your AI-Powered Risk and PnL Data Assistant</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="support-label">SUPPORT:</div>
+                <div class="support-team">Apollo Thematic Investing Team</div>
+                <a href="mailto:ati_team@apollo.com" class="support-email">ati_team@apollo.com</a>
+            </div>
+        </div>
+        
+        <div class="content">
+
+            <div class="section">
+                <h2>📑 Quick Links</h2>
+                <ul>
+                    <li><a href="#getting-started">🚀 Getting Started - Add to Teams</a></li>
+                    <li><a href="#example-queries">💬 Example Queries</a></li>
+                    <li><a href="#understanding-response">📊 Understanding the Response</a></li>
+                    <li><a href="#blue-arrows">🔵 Understanding Blue Arrows</a></li>
+                    <li><a href="#feedback">🦴 Giving Treats</a></li>
+                    <li><a href="#commands">⌨️ Available Commands</a></li>
+                    <li><a href="#tips">💡 Tips & Best Practices</a></li>
+                    <li><a href="#getting-help">❓ Getting Help & Troubleshooting</a></li>
+                </ul>
+            </div>
+    
+            
+            <div class="section" id="getting-started">
+                <h2>🚀 Getting Started - Add to Microsoft Teams</h2>
+                <p>Follow these simple steps to add the APO Risk Intern to your Microsoft Teams:</p>
+                
+                <div class="step-box">
+                    <h4>Step 1: Search for APO Risk Intern</h4>
+                    <ol>
+                        <li>Open Microsoft Teams</li>
+                        <li>Click on <strong>Apps</strong> in the left sidebar</li>
+                        <li>Search for <strong>"APO Risk Intern"</strong></li>
+                        <li>Click on the app when it appears in the search results</li>
+                    </ol>
+                </div>
+                
+                <div class="screenshot">
+                    <img src="/assets/images/add_intern_step1.png" alt="Search for APO Risk Intern in Teams">
+                    <div class="screenshot-caption">Step 1: Search for "APO Risk Intern" in the Teams Apps section</div>
+                </div>
+                
+                <div class="step-box">
+                    <h4>Step 2: Add the App</h4>
+                    <ol>
+                        <li>Click the <strong>Add</strong> button</li>
+                        <li>The APO Risk Intern will be added to your Teams</li>
+                        <li>You can now start chatting with your AI assistant!</li>
+                    </ol>
+                </div>
+                
+                <div class="screenshot">
+                    <img src="/assets/images/add_intern_step2.png" alt="Add APO Risk Intern to Teams">
+                    <div class="screenshot-caption">Step 2: Click "Add" to install the APO Risk Intern</div>
+                </div>
+                
+                <div class="tip-box">
+                    Once added, you can find the APO Risk Intern in your Chat list or by searching for it in Teams!
+                </div>
+            </div>
+            
+            <div class="section" id="example-queries">
+                <h2>💬 Example Queries</h2>
+                <p>Here are some example questions you can ask the APO Risk Intern:</p>
+                <div class="example-query">"What is the beta for CSTRAT?"</div>
+                <div class="example-query">"What is the rate duration of CSTRAT?"</div>
+                <div class="example-query">"What is our current position in SATS in CSTRAT?"</div>
+                <div class="example-query">"What are the top 10 positive and negative pnl contributors in CSTRAT?"</div>
+                
+                <div class="tip-box">
+                    You can also see these examples in the bot! Click <strong>View Prompts</strong> (📋) → Select <strong>Help</strong> → Click <strong>Send</strong> to see available commands and example queries.
+                </div>
+            </div>
+            
+            <div class="section" id="understanding-response">
+                <h2>📊 Understanding the Response</h2>
+                
+                <p>When you ask a question, the bot organizes its response into collapsible sections:</p>
+                
+                <h3>Common Sections You'll See:</h3>
+                <div class="command-list">
+                    <div class="command-item">
+                        <strong>INPUTS & ASSUMPTIONS 🔽</strong><br>
+                        Shows what parameters and assumptions the bot used for your query<br>
+                        <em>The Confidence Score appears here at the top</em>
+                    </div>
+                    <div class="command-item">
+                        <strong>DATA RESULTS 🔽</strong><br>
+                        Contains the table with your query results (always expanded by default)
+                    </div>
+                    <div class="command-item">
+                        <strong>KEY INSIGHTS 🔽</strong><br>
+                        Highlights important takeaways from the data (always expanded by default)
+                    </div>
+                    <div class="command-item">
+                        <strong>ISSUES & CLARIFICATIONS ▶️</strong><br>
+                        Shows any warnings or clarifications needed (collapsed by default)
+                    </div>
+                </div>
+                
+                <h3>Confidence Score:</h3>
+                <p><em>Located in the INPUTS & ASSUMPTIONS section</em></p>
+                <div class="highlight-box">
+                    <strong>✅ Confidence: 95%</strong> - High confidence (≥80%)<br>
+                    The bot is confident the SQL query correctly follows best practices and schema rules.
+                    <br><br>
+                    <strong>⚠️ Confidence: 65%</strong> - Lower confidence (<80%)<br>
+                    The query may have ambiguities or potential issues. Review the results carefully.
+                </div>
+                
+                <div class="tip-box">
+                    The confidence score is based on how well the generated SQL follows the system's instructions, including schema adherence, filter logic, and query clarity.
+                </div>
+                
+                <h3>Table Format:</h3>
+                <p>Results are displayed in a clean, formatted table with:</p>
+                <ul>
+                    <li>Bold headers for easy identification</li>
+                    <li>Alternating row colors for readability</li>
+                    <li>Proper number formatting (currency, percentages)</li>
+                    <li>Emoji indicators for rankings (🥇🥈🥉)</li>
+                </ul>
+                
+                <div class="screenshot">
+                    <img src="/assets/images/beta_cstrat_history.png" alt="Beta CSTRAT History Query">
+                    <div class="screenshot-caption">Example: "What is the beta history for CSTRAT?" showing formatted table with data</div>
+                </div>
+                
+                <h3>Key Insights:</h3>
+                <p>The bot automatically generates 2-3 key takeaways from your data, helping you quickly understand the most important findings.</p>
+            </div>
+            
+            <div class="section" id="blue-arrows">
+                <h2>🔵 Understanding the Blue Arrows</h2>
+                <p><strong>Blue arrows mean collapsible sections</strong> - click them to expand or collapse different parts of the response.</p>
+                
+                <div class="step-box">
+                    <h4>What are the Blue Arrows?</h4>
+                    <p>The <span class="arrow-indicator">🔽</span> blue arrows in the bot's responses are <strong>collapsible section toggles</strong>. They allow you to expand or collapse different parts of the response for better readability.</p>
+                </div>
+                
+                <div class="screenshot">
+                    <img src="/assets/images/beta_cstrat.png" alt="Beta Query Example">
+                    <div class="screenshot-caption">Example: "What is the beta for CSTRAT?" showing collapsible sections with blue arrows</div>
+                </div>
+                
+                <h3>How to Use Collapsible Sections:</h3>
+                
+                <div class="highlight-box">
+                    <strong>Step 1:</strong> Look for sections with blue arrows (🔽 or ▶️)<br>
+                    <strong>Step 2:</strong> Click on the section header to expand/collapse<br>
+                    <strong>Step 3:</strong> Expanded sections show 🔽, collapsed sections show ▶️
+                </div>
+                
+                <div class="tip-box">
+                    The most important sections (DATA RESULTS and KEY INSIGHTS) are expanded by default so you can see your data immediately!
+                </div>
+            </div>
+            
+            <div class="section" id="feedback">
+                <h2>🦴 Giving Treats</h2>
+                
+                <p>Help your Golden Retriever intern learn and grow! Just like training a good pup, your feedback helps improve performance.</p>
+                
+                <h3>How to Give Treats:</h3>
+                <div class="highlight-box">
+                    <strong>Your pup recognizes treats automatically!</strong><br>
+                    Just chat naturally - when you say things like "good job!", "this looks great!", or "not quite right", your Golden Retriever intern picks up on it and learns from your feedback.
+                </div>
+                
+                <h3>Types of Treats:</h3>
+                <div class="command-list">
+                    <div class="command-item">
+                        <strong>🦴 Good Pup Treats</strong><br>
+                        "This is exactly what I needed!", "Perfect!", "Great results!", "Good job!"
+                    </div>
+                    <div class="command-item">
+                        <strong>🎾 Playful Nudges</strong><br>
+                        "This doesn't look right", "Not what I expected", "Can you try again?"
+                    </div>
+                    <div class="command-item">
+                        <strong>🐕 Training Tips</strong><br>
+                        "It would be helpful if...", "Could you also show...", "I'd like to see..."
+                    </div>
+                </div>
+                
+                <div class="tip-box">
+                    No special commands needed - just respond naturally and your feedback helps train the intern!
+                </div>
+            </div>
+            
+            <div class="section" id="commands">
+                <h2>⌨️ Available Commands</h2>
+                <p>Quick reference for bot commands:</p>
+                
+                <div class="command-list">
+                    <div class="command-item">
+                        <strong>help</strong> or <strong>/help</strong><br>
+                        Show the help message with all available commands and example queries
+                    </div>
+                    
+                    <div class="command-item">
+                        <strong>health</strong> or <strong>/health</strong><br>
+                        Check the system health status and verify the bot is working correctly
+                    </div>
+                    
+                    <div class="command-item">
+                        <strong>tables</strong> or <strong>/tables</strong><br>
+                        List all available database tables you can query
+                    </div>
+                    
+                    <div class="command-item">
+                        <strong>clear</strong> or <strong>/clear</strong><br>
+                        Clear your conversation history and start fresh
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section" id="tips">
+                <h2>💡 Tips & Best Practices</h2>
+                <p>Get the most out of the APO Risk Intern:</p>
+                
+                <div class="tip-box">
+                    <strong>Be specific</strong> with your questions - use exact fund codes like "CSTRAT" instead of ambiguous terms like "strategy fund" or "credit strategy"
+                </div>
+                
+                <div class="tip-box">
+                    Use <strong>clear time references</strong> (e.g., "as of today", "latest", "current")
+                </div>
+                
+                <div class="tip-box">
+                    If you get unexpected results, <strong>try rephrasing</strong> your question or use the "clear" command to start fresh
+                </div>
+                
+                <div class="tip-box">
+                    Click on the blue arrows (🔽) to expand/collapse sections and focus on what matters most
+                </div>
+                
+                <div class="warning-box">
+                    <strong>Large result sets truncated</strong> - automatically limited to 50 rows for performance. If you need more data, ask for specific filters
+                </div>
+            </div>
+            
+            <div class="section" id="getting-help">
+                <h2>❓ Getting Help & Troubleshooting</h2>
+                
+                <h3>Getting Help:</h3>
+                
+                <div class="step-box">
+                    <h4>Method 1: Using the Help Command</h4>
+                    <ol>
+                        <li>Type <strong>help</strong> in the chat</li>
+                        <li>Hit <strong>Send</strong> ➤</li>
+                        <li>You'll see a list of available commands and example queries</li>
+                    </ol>
+                </div>
+                
+                <div class="screenshot">
+                    <img src="/assets/images/help_command.png" alt="Help Command Response">
+                    <div class="screenshot-caption">Help command showing available commands and example queries</div>
+                </div>
+                
+                <div class="step-box">
+                    <h4>Method 2: Using View Prompts Menu</h4>
+                    <ol>
+                        <li>Click on the <strong>View Prompts</strong> button (📋 icon) at the bottom of the chat</li>
+                        <li>Select <strong>Help</strong> from the menu</li>
+                        <li>Click <strong>Send</strong> ➤</li>
+                        <li>The bot will display all available commands and examples</li>
+                    </ol>
+                </div>
+                
+                <div class="screenshot">
+                    <img src="/assets/images/view_prompts_menu.png" alt="View Prompts Menu">
+                    <div class="screenshot-caption">View Prompts menu showing Help, Health, and Tables options</div>
+                </div>
+                
+                <h3>Troubleshooting:</h3>
+                
+                <div class="command-list">
+                    <div class="command-item">
+                        <strong>Bot not responding?</strong><br>
+                        • Check system health with <strong>health</strong> command<br>
+                        • Clear conversation history with <strong>clear</strong><br>
+                        • Rephrase your question more simply
+                    </div>
+                    
+                    <div class="command-item">
+                        <strong>Unexpected results?</strong><br>
+                        • Check INPUTS & ASSUMPTIONS section<br>
+                        • Review the confidence score<br>
+                        • Be more specific with fund codes, dates, or metrics<br>
+                        • Give feedback by saying "doesn't look right", "incorrect", or "not good" - the bot will log it
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>APO Risk Intern</strong> - Powered by Azure OpenAI</p>
+            <p>Version 1.0 | Last Updated: November 2025</p>
+        </div>
+    </div>
+</body>
+</html>

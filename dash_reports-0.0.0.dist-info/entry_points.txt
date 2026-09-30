@@ -1,0 +1,14 @@
+[console_scripts]
+argus-wiki-server = dash_reports.sub_servers.argus_wiki_server.server:main
+argus-wiki-server-seed = dash_reports.sub_servers.argus_wiki_server.seed_app_config:main
+cdx-options-server = dash_reports.sub_servers.cdx_options_server.__main__:main
+cdx-research-server = dash_reports.sub_servers.cdx_research_server.__main__:main
+cdx-research-server-seed = dash_reports.sub_servers.cdx_research_server.seed_app_config:main
+html-sub-server = dash_reports.sub_servers.html_sub_server.__main__:main
+industry-tracker-refresh = dash_reports.industry_tracker.__main__:main
+industry-tracker-server = dash_reports.sub_servers.industry_tracker_server.__main__:main
+mcp-server = dash_reports.sub_servers.mcp_server.__main__:main
+pred-tracker = dash_reports.sub_servers.pred_tracker.__main__:main
+teams-server = dash_reports.sub_servers.teams_server.__main__:main
+vc-server = dash_reports.sub_servers.vc_server.__main__:main
+vc-server-seed = dash_reports.sub_servers.vc_server.seed_app_config:main

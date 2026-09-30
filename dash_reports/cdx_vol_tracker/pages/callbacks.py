@@ -1,0 +1,4 @@
+from dash_reports.vol_tracker_common.base_callbacks import register_vol_tracker_callbacks
+import dash_reports.cdx_vol_tracker.pages.cdx_vol_page as page
+
+register_vol_tracker_callbacks(page.page_instance)

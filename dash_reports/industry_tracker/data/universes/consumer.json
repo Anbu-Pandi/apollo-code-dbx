@@ -1,0 +1,2270 @@
+{
+  "key": "consumer",
+  "display_name": "Consumer Industry",
+  "subtitle": "Consumer public equity and credit comps across Food & Beverage, Consumer Products, Gaming/Lodging/Leisure, and Food Retail/Restaurants",
+  "sectors": [
+    {
+      "sector": "Food & Beverage",
+      "public_comps": [
+        {
+          "subsector": "Food",
+          "tickers": [
+            {
+              "ticker": "DAR-US",
+              "name": "Darling Ingredie"
+            },
+            {
+              "ticker": "INGR-US",
+              "name": "Ingredion Inc"
+            },
+            {
+              "ticker": "BGS-US",
+              "name": "B&G Foods Inc"
+            },
+            {
+              "ticker": "BRBR-US",
+              "name": "Bellring Brands"
+            },
+            {
+              "ticker": "LW-US",
+              "name": "Lamb Weston"
+            },
+            {
+              "ticker": "HLNFF-US",
+              "name": "High Liner Foods"
+            },
+            {
+              "ticker": "DLM-US",
+              "name": "Del Monte Foods"
+            },
+            {
+              "ticker": "POST-US",
+              "name": "Post Holdings In"
+            },
+            {
+              "ticker": "SOY-CN",
+              "name": "Sunopta Inc"
+            },
+            {
+              "ticker": "THS-US",
+              "name": "Treehouse Foods"
+            },
+            {
+              "ticker": "PPC-US",
+              "name": "Pilgrim'S Pride"
+            },
+            {
+              "ticker": "NOMD-US",
+              "name": "Nomad Foods"
+            },
+            {
+              "ticker": "JBSS3-BZ",
+              "name": "Jbs"
+            },
+            {
+              "ticker": "MRFG3-BZ",
+              "name": "Mbrf Global Food"
+            },
+            {
+              "ticker": "NATH-US",
+              "name": "Nathans Famous"
+            },
+            {
+              "ticker": "BRID-US",
+              "name": "Bridgford Foods"
+            },
+            {
+              "ticker": "CALM-US",
+              "name": "Cal-Maine Foods"
+            },
+            {
+              "ticker": "CPB-US",
+              "name": "The Campbell'S C"
+            },
+            {
+              "ticker": "CAG-US",
+              "name": "Conagra Brands I"
+            },
+            {
+              "ticker": "FLO-US",
+              "name": "Flowers Foods"
+            },
+            {
+              "ticker": "FDP-US",
+              "name": "Fresh Del Monte"
+            },
+            {
+              "ticker": "GIS-US",
+              "name": "General Mills In"
+            },
+            {
+              "ticker": "HAIN-US",
+              "name": "Hain Celestial"
+            },
+            {
+              "ticker": "HLF-US",
+              "name": "Herbalife Ltd"
+            },
+            {
+              "ticker": "HSY-US",
+              "name": "Hershey Co/The"
+            },
+            {
+              "ticker": "HRL-US",
+              "name": "Hormel Foods Crp"
+            },
+            {
+              "ticker": "TWNK-US",
+              "name": "Hostess Brands"
+            },
+            {
+              "ticker": "JJSF-US",
+              "name": "J & J Snack Food"
+            },
+            {
+              "ticker": "SJM-US",
+              "name": "Jm Smucker Co"
+            },
+            {
+              "ticker": "K-US",
+              "name": "Kellanova"
+            },
+            {
+              "ticker": "KHC-US",
+              "name": "Kraft Heinz Co/T"
+            },
+            {
+              "ticker": "LANC-US",
+              "name": "Lancaster Colony"
+            },
+            {
+              "ticker": "MKC-US",
+              "name": "Mccormick-N/V"
+            },
+            {
+              "ticker": "MDLZ-US",
+              "name": "Mondelez Inter-A"
+            },
+            {
+              "ticker": "NESN-CH",
+              "name": "Nestle Sa-Reg"
+            },
+            {
+              "ticker": "SAFM-US",
+              "name": "Sanderson Farms"
+            },
+            {
+              "ticker": "SENEB-US",
+              "name": "Seneca Foods-B"
+            },
+            {
+              "ticker": "SMPL-US",
+              "name": "Simply Good Food"
+            },
+            {
+              "ticker": "TR-US",
+              "name": "Tootsie Roll Ind"
+            },
+            {
+              "ticker": "TSN-US",
+              "name": "Tyson Foods-A"
+            },
+            {
+              "ticker": "FREE-US",
+              "name": "Whole Earth Bran"
+            },
+            {
+              "ticker": "UTZ-US",
+              "name": "Utz Brands Inc"
+            }
+          ]
+        },
+        {
+          "subsector": "Wholesale - Consumer Staples",
+          "tickers": [
+            {
+              "ticker": "ADM-US",
+              "name": "Archer-Daniels"
+            },
+            {
+              "ticker": "BG-US",
+              "name": "Bunge Global Sa"
+            }
+          ]
+        },
+        {
+          "subsector": "Beverages",
+          "tickers": [
+            {
+              "ticker": "ABI-BE",
+              "name": "Anheuser-Busch I"
+            },
+            {
+              "ticker": "KDP-US",
+              "name": "Keurig Dr Pepper"
+            },
+            {
+              "ticker": "TAP-US",
+              "name": "Molson Coors-B"
+            },
+            {
+              "ticker": "MNST-US",
+              "name": "Monster Beverage"
+            },
+            {
+              "ticker": "KO-US",
+              "name": "Coca-Cola Co/The"
+            },
+            {
+              "ticker": "STZ-US",
+              "name": "Constellation-A"
+            },
+            {
+              "ticker": "PRMW-US",
+              "name": "Primo Water Corp"
+            },
+            {
+              "ticker": "FARM-US",
+              "name": "Farmer Bros Co"
+            },
+            {
+              "ticker": "HEIA-NL",
+              "name": "Heineken Nv"
+            },
+            {
+              "ticker": "FIZZ-US",
+              "name": "Natl Beverage"
+            },
+            {
+              "ticker": "PEP-US",
+              "name": "Pepsico Inc"
+            },
+            {
+              "ticker": "RI-FR",
+              "name": "Pernod Ricard Sa"
+            },
+            {
+              "ticker": "RCO-FR",
+              "name": "Remy Cointreau"
+            }
+          ]
+        },
+        {
+          "subsector": "Consumer Services",
+          "tickers": [
+            {
+              "ticker": "WW-US",
+              "name": "Ww International"
+            },
+            {
+              "ticker": "MED-US",
+              "name": "Medifast Inc"
+            }
+          ]
+        },
+        {
+          "subsector": "Tobacco & Cannabis",
+          "tickers": [
+            {
+              "ticker": "TPB-US",
+              "name": "Turning Point Br"
+            },
+            {
+              "ticker": "VGR-US",
+              "name": "Vector Group Ltd"
+            }
+          ]
+        }
+      ],
+      "credit_comps": [
+        {
+          "subsector": "Packaged Food | General Distributors",
+          "tickers": [
+            {
+              "ticker": "FOODTO",
+              "name": "1440 Foods"
+            },
+            {
+              "ticker": "AVFOPO",
+              "name": "8th Avenue"
+            },
+            {
+              "ticker": "ALPUSB",
+              "name": "Aryzta North America"
+            },
+            {
+              "ticker": "BGS",
+              "name": "B&G Food"
+            },
+            {
+              "ticker": "CHGUEN",
+              "name": "Ch Guenther"
+            },
+            {
+              "ticker": "BAKMAR",
+              "name": "BakeMark"
+            },
+            {
+              "ticker": "BRBR",
+              "name": "BellRing Brands"
+            },
+            {
+              "ticker": "CHBANI",
+              "name": "Chobani"
+            },
+            {
+              "ticker": "BCPENO",
+              "name": "Dessert Holdings"
+            },
+            {
+              "ticker": "DOLE",
+              "name": "Dole Food"
+            },
+            {
+              "ticker": "FLORFO",
+              "name": "Florida Foods Products"
+            },
+            {
+              "ticker": "KHC",
+              "name": "Kraft Heinz"
+            },
+            {
+              "ticker": "LW",
+              "name": "Lamb Weston"
+            },
+            {
+              "ticker": "MSTPRO",
+              "name": "Mastronardi Produce"
+            },
+            {
+              "ticker": "MOFOOD",
+              "name": "Monogram Food Solutions"
+            },
+            {
+              "ticker": "BEIMID",
+              "name": "Nomad Foods"
+            },
+            {
+              "ticker": "IGBOND",
+              "name": "Nomad Foods"
+            },
+            {
+              "ticker": "POST",
+              "name": "Post Holdings"
+            },
+            {
+              "ticker": "RISBAK",
+              "name": "Rise Baking"
+            },
+            {
+              "ticker": "SHEARE",
+              "name": "Shearer's Food"
+            },
+            {
+              "ticker": "SMPL",
+              "name": "Simply Good Foods"
+            },
+            {
+              "ticker": "THS",
+              "name": "TreeHouse Foods"
+            },
+            {
+              "ticker": "UTZQFD",
+              "name": "Utz"
+            },
+            {
+              "ticker": "WAWPAC",
+              "name": "Wawona & Gerawan"
+            }
+          ]
+        },
+        {
+          "subsector": "Packaged Food | Protein Distributors",
+          "tickers": [
+            {
+              "ticker": "HLFCN",
+              "name": "High Liner Foods"
+            },
+            {
+              "ticker": "JBS",
+              "name": "JBS"
+            },
+            {
+              "ticker": "MRFGBZ",
+              "name": "Marfrig Global Foods"
+            },
+            {
+              "ticker": "AGCO",
+              "name": "Agco Grain & Protein"
+            },
+            {
+              "ticker": "NATH",
+              "name": "Nathan's Famous"
+            },
+            {
+              "ticker": "PPC",
+              "name": "Pilgrim's Pride"
+            },
+            {
+              "ticker": "SIMFOO",
+              "name": "Simmons Food"
+            },
+            {
+              "ticker": "QUIFOO",
+              "name": "Quirch Foods"
+            }
+          ]
+        },
+        {
+          "subsector": "Packaged Food | Other",
+          "tickers": [
+            {
+              "ticker": "DAR",
+              "name": "Darling Ingredients"
+            },
+            {
+              "ticker": "RESTEC",
+              "name": "Restaurant Technologies"
+            },
+            {
+              "ticker": "ICECR",
+              "name": "Froneri"
+            },
+            {
+              "ticker": "OZHL",
+              "name": "Whole Earth Brands"
+            },
+            {
+              "ticker": "CJFINC",
+              "name": "Alphia inc"
+            },
+            {
+              "ticker": "TATELN",
+              "name": "Primary Products Finance LLC"
+            },
+            {
+              "ticker": "SOLINA",
+              "name": "Solina"
+            }
+          ]
+        },
+        {
+          "subsector": "Nutrition Products",
+          "tickers": [
+            {
+              "ticker": "KNSACQ",
+              "name": "Nutrisystem"
+            },
+            {
+              "ticker": "WW",
+              "name": "Weight Watchers"
+            },
+            {
+              "ticker": "HLF",
+              "name": "Herbalife"
+            },
+            {
+              "ticker": "JUICEP",
+              "name": "Juice Plus"
+            },
+            {
+              "ticker": "ISAGIN",
+              "name": "Isagenix"
+            },
+            {
+              "ticker": "NOUBUY",
+              "name": "Actus Nutrition"
+            }
+          ]
+        },
+        {
+          "subsector": "Beverages | Alcohol",
+          "tickers": [
+            {
+              "ticker": "CTYBRW",
+              "name": "City Brewing"
+            },
+            {
+              "ticker": "PBST",
+              "name": "Pabst Blue Ribbon"
+            },
+            {
+              "ticker": "CNDINC",
+              "name": "Arterra Wines"
+            }
+          ]
+        },
+        {
+          "subsector": "Beverages",
+          "tickers": [
+            {
+              "ticker": "NAKJUI",
+              "name": "Tropicana"
+            }
+          ]
+        },
+        {
+          "subsector": "Tobacco / Cannabis",
+          "tickers": [
+            {
+              "ticker": "TPB",
+              "name": "Turning Point Brands"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sector": "Consumer Products & Services",
+      "public_comps": [
+        {
+          "subsector": "Contemporary Retail",
+          "tickers": [
+            {
+              "ticker": "GIII-US",
+              "name": "G-III Apparel"
+            },
+            {
+              "ticker": "LEVI-US",
+              "name": "Levi Strauss"
+            }
+          ]
+        },
+        {
+          "subsector": "Luxury",
+          "tickers": [
+            {
+              "ticker": "CPRI-US",
+              "name": "Capri Holdings"
+            }
+          ]
+        },
+        {
+          "subsector": "Apparel",
+          "tickers": [
+            {
+              "ticker": "CRI-US",
+              "name": "Carter's"
+            },
+            {
+              "ticker": "COLM-US",
+              "name": "Columbia Sportswear"
+            },
+            {
+              "ticker": "KTB-US",
+              "name": "Kontoor Brands"
+            },
+            {
+              "ticker": "NKE-US",
+              "name": "NIKE"
+            },
+            {
+              "ticker": "PVH-US",
+              "name": "PVH Corp."
+            },
+            {
+              "ticker": "RL-US",
+              "name": "Ralph Lauren"
+            },
+            {
+              "ticker": "TPR-US",
+              "name": "Tapestry"
+            },
+            {
+              "ticker": "UAA-US",
+              "name": "Under Armour"
+            },
+            {
+              "ticker": "VFC-US",
+              "name": "V.F. Corp."
+            },
+            {
+              "ticker": "AS-US",
+              "name": "Amer Sports"
+            },
+            {
+              "ticker": "CALY-US",
+              "name": "Callaway Golf"
+            }
+          ]
+        },
+        {
+          "subsector": "Footwear",
+          "tickers": [
+            {
+              "ticker": "CROX-US",
+              "name": "Crocs"
+            },
+            {
+              "ticker": "OXM-US",
+              "name": "Oxford Industries"
+            },
+            {
+              "ticker": "SHOO-US",
+              "name": "Steven Madden"
+            },
+            {
+              "ticker": "WWW-US",
+              "name": "Wolverine World Wide"
+            }
+          ]
+        },
+        {
+          "subsector": "Apparel & Textile Products",
+          "tickers": [
+            {
+              "ticker": "FOSL-US",
+              "name": "Fossil Group Inc"
+            },
+            {
+              "ticker": "GIL-CN",
+              "name": "Gildan Activewea"
+            },
+            {
+              "ticker": "HBI-US",
+              "name": "Hanesbrands Inc"
+            },
+            {
+              "ticker": "TOD-IT",
+              "name": "Tod'S Spa"
+            },
+            {
+              "ticker": "VNCE-US",
+              "name": "Vince Holding Co"
+            }
+          ]
+        },
+        {
+          "subsector": "Accessories",
+          "tickers": [
+            {
+              "ticker": "1910-HK",
+              "name": "Samsonite Group"
+            }
+          ]
+        },
+        {
+          "subsector": "Other Consumer",
+          "tickers": [
+            {
+              "ticker": "MCW-US",
+              "name": "Mister Car Wash"
+            },
+            {
+              "ticker": "GOLF-US",
+              "name": "Acushnet"
+            }
+          ]
+        },
+        {
+          "subsector": "Home Furnishings",
+          "tickers": [
+            {
+              "ticker": "SNBR-US",
+              "name": "Sleep Number"
+            },
+            {
+              "ticker": "LZB-US",
+              "name": "La-Z-Boy"
+            },
+            {
+              "ticker": "LEG-US",
+              "name": "Leggett & Platt"
+            },
+            {
+              "ticker": "MLKN-US",
+              "name": "MillerKnoll"
+            },
+            {
+              "ticker": "SGI-US",
+              "name": "Somnigroup Intl."
+            }
+          ]
+        },
+        {
+          "subsector": "Retail - Discretionary",
+          "tickers": [
+            {
+              "ticker": "LESL-US",
+              "name": "Leslie'S Inc"
+            },
+            {
+              "ticker": "SBH-US",
+              "name": "Sally Beauty Hol"
+            },
+            {
+              "ticker": "DRVN-US",
+              "name": "Driven Brands Ho"
+            }
+          ]
+        },
+        {
+          "subsector": "Home & Office Products",
+          "tickers": [
+            {
+              "ticker": "TPX-US",
+              "name": "Tempur Sealy Int"
+            },
+            {
+              "ticker": "PRPL-US",
+              "name": "Purple Innovatio"
+            },
+            {
+              "ticker": "SCS-US",
+              "name": "Steelcase Inc-A"
+            },
+            {
+              "ticker": "HNI-US",
+              "name": "Hni Corp"
+            },
+            {
+              "ticker": "TUP-US",
+              "name": "Tupperware Brand"
+            }
+          ]
+        },
+        {
+          "subsector": "Durables",
+          "tickers": [
+            {
+              "ticker": "WHR-US",
+              "name": "Whirlpool"
+            },
+            {
+              "ticker": "LCUT-US",
+              "name": "Lifetime Brands"
+            },
+            {
+              "ticker": "NWL-US",
+              "name": "Newell Brands"
+            },
+            {
+              "ticker": "SMG-US",
+              "name": "Scotts Miracle-Gro"
+            },
+            {
+              "ticker": "CENT-US",
+              "name": "Central Garden & Pet"
+            },
+            {
+              "ticker": "COOK-US",
+              "name": "Traeger"
+            },
+            {
+              "ticker": "ACCO-US",
+              "name": "ACCO Brands"
+            },
+            {
+              "ticker": "ENR-US",
+              "name": "Energizer Holdings"
+            },
+            {
+              "ticker": "HELE-US",
+              "name": "Helen of Troy"
+            },
+            {
+              "ticker": "SPB-US",
+              "name": "Spectrum Brands"
+            },
+            {
+              "ticker": "REYN-US",
+              "name": "Reynolds Consumer"
+            },
+            {
+              "ticker": "YETI-US",
+              "name": "YETI Holdings"
+            }
+          ]
+        },
+        {
+          "subsector": "Large Cap HPC",
+          "tickers": [
+            {
+              "ticker": "CHD-US",
+              "name": "Church & Dwight"
+            },
+            {
+              "ticker": "CLX-US",
+              "name": "Clorox"
+            },
+            {
+              "ticker": "CL-US",
+              "name": "Colgate-Palmolive"
+            },
+            {
+              "ticker": "EL-US",
+              "name": "Estée Lauder"
+            },
+            {
+              "ticker": "KMB-US",
+              "name": "Kimberly-Clark"
+            },
+            {
+              "ticker": "OR-FR",
+              "name": "L'Oréal"
+            },
+            {
+              "ticker": "PG-US",
+              "name": "Procter & Gamble"
+            },
+            {
+              "ticker": "RKT-GB",
+              "name": "Reckitt Benckiser"
+            }
+          ]
+        },
+        {
+          "subsector": "Beauty and Personal Care",
+          "tickers": [
+            {
+              "ticker": "COTY-US",
+              "name": "Coty"
+            },
+            {
+              "ticker": "EPC-US",
+              "name": "Edgewell Personal Care"
+            },
+            {
+              "ticker": "ELF-US",
+              "name": "e.l.f. Beauty"
+            },
+            {
+              "ticker": "PRGO-US",
+              "name": "Perrigo"
+            },
+            {
+              "ticker": "OLPX-US",
+              "name": "Olaplex Holdings"
+            },
+            {
+              "ticker": "PBH-US",
+              "name": "Prestige Consumer Healthcare"
+            }
+          ]
+        },
+        {
+          "subsector": "Household Products",
+          "tickers": [
+            {
+              "ticker": "HEN-GY",
+              "name": "Henkel Ag & Co K"
+            },
+            {
+              "ticker": "NUS-US",
+              "name": "Nu Skin Enterp-A"
+            },
+            {
+              "ticker": "UNA-NL",
+              "name": "Unilever Plc"
+            }
+          ]
+        },
+        {
+          "subsector": "Home Improvement",
+          "tickers": [
+            {
+              "ticker": "HAYW-US",
+              "name": "Hayward"
+            }
+          ]
+        },
+        {
+          "subsector": "Leisure Products",
+          "tickers": [
+            {
+              "ticker": "MODG-US",
+              "name": "Callaway Golf Co"
+            },
+            {
+              "ticker": "VSTO-US",
+              "name": "Kinetic Group In"
+            },
+            {
+              "ticker": "MAT-US",
+              "name": "Mattel Inc"
+            }
+          ]
+        }
+      ],
+      "credit_comps": [
+        {
+          "subsector": "Beauty Products",
+          "tickers": [
+            {
+              "ticker": "ANABEV",
+              "name": "Anastasia Bevery Hills"
+            },
+            {
+              "ticker": "CNGA",
+              "name": "Conair"
+            },
+            {
+              "ticker": "COTY",
+              "name": "Coty"
+            },
+            {
+              "ticker": "EPC",
+              "name": "Edgewell Personal Care"
+            },
+            {
+              "ticker": "KNDVCR",
+              "name": "KDC"
+            },
+            {
+              "ticker": "OLPX",
+              "name": "Olaplex"
+            },
+            {
+              "ticker": "RODFIE",
+              "name": "Rodan + Fields"
+            },
+            {
+              "ticker": "PARISP",
+              "name": "Paris Presents"
+            },
+            {
+              "ticker": "PARCOE",
+              "name": "PDC Brands"
+            },
+            {
+              "ticker": "PRGO",
+              "name": "Perrigo"
+            },
+            {
+              "ticker": "SBH",
+              "name": "Sally Beauty"
+            }
+          ]
+        },
+        {
+          "subsector": "Durable / Recreation Products",
+          "tickers": [
+            {
+              "ticker": "CALY",
+              "name": "TopGolf Callaway"
+            },
+            {
+              "ticker": "GSMHLD",
+              "name": "GSM Outdoors"
+            },
+            {
+              "ticker": "PELPRO",
+              "name": "Pelican Products"
+            },
+            {
+              "ticker": "PUREFI",
+              "name": "Pure Fishing"
+            },
+            {
+              "ticker": "RECESS",
+              "name": "PlayCore"
+            },
+            {
+              "ticker": "PLAYPO",
+              "name": "PlayPower"
+            },
+            {
+              "ticker": "LEWHOL",
+              "name": "Rather Outdoors"
+            },
+            {
+              "ticker": "SAMISA",
+              "name": "Samsonite"
+            },
+            {
+              "ticker": "SRAMCP",
+              "name": "SRAM"
+            },
+            {
+              "ticker": "TGPHLD",
+              "name": "Traeger Grills"
+            },
+            {
+              "ticker": "WAYSFM",
+              "name": "Wayne-Sanderson Farms"
+            },
+            {
+              "ticker": "WEBSTP",
+              "name": "Weber"
+            }
+          ]
+        },
+        {
+          "subsector": "Pool Products",
+          "tickers": [
+            {
+              "ticker": "KIKCN",
+              "name": "KIK Consumer Products"
+            },
+            {
+              "ticker": "LESL",
+              "name": "Leslie's Poolmart"
+            },
+            {
+              "ticker": "HAYW",
+              "name": "Hayward"
+            }
+          ]
+        },
+        {
+          "subsector": "Brand Licensing",
+          "tickers": [
+            {
+              "ticker": "AUTBRA",
+              "name": "Authentic Brands"
+            },
+            {
+              "ticker": "WHPGLO",
+              "name": "WHP Global"
+            }
+          ]
+        },
+        {
+          "subsector": "Mattresses",
+          "tickers": [
+            {
+              "ticker": "SERSIM",
+              "name": "Serta Simmons"
+            },
+            {
+              "ticker": "SGI",
+              "name": "Tempur Sealy"
+            }
+          ]
+        },
+        {
+          "subsector": "Apparel Manufacturers",
+          "tickers": [
+            {
+              "ticker": "AUGSPT",
+              "name": "Augusta Sportswear"
+            },
+            {
+              "ticker": "BIRKEN",
+              "name": "Birkenstock"
+            },
+            {
+              "ticker": "GOOSCN",
+              "name": "Canada Goose"
+            },
+            {
+              "ticker": "CROX",
+              "name": "Crocs"
+            },
+            {
+              "ticker": "JOUPER",
+              "name": "Domtar Personal Care"
+            },
+            {
+              "ticker": "HBI",
+              "name": "Hanesbrands"
+            },
+            {
+              "ticker": "YSGINC",
+              "name": "Next Level Apparel"
+            },
+            {
+              "ticker": "KTB",
+              "name": "Kontoor Brands"
+            },
+            {
+              "ticker": "LEVI",
+              "name": "Levi's"
+            },
+            {
+              "ticker": "PVH",
+              "name": "PVH"
+            },
+            {
+              "ticker": "SSACTI",
+              "name": "S&S Activewear"
+            },
+            {
+              "ticker": "TORBUR",
+              "name": "Tory Burch"
+            },
+            {
+              "ticker": "UA",
+              "name": "Under Armour"
+            }
+          ]
+        },
+        {
+          "subsector": "Household Products",
+          "tickers": [
+            {
+              "ticker": "AMEGRE",
+              "name": "American Greetings"
+            },
+            {
+              "ticker": "CENT",
+              "name": "Central Garden & Pet"
+            },
+            {
+              "ticker": "ENR",
+              "name": "Energizer"
+            },
+            {
+              "ticker": "MLHR",
+              "name": "Herman Miller"
+            },
+            {
+              "ticker": "HDCINC",
+              "name": "Hunter Douglas"
+            },
+            {
+              "ticker": "HRMR",
+              "name": "Hunter Fan"
+            },
+            {
+              "ticker": "WKIHLD",
+              "name": "Instant Brands"
+            },
+            {
+              "ticker": "LCUT",
+              "name": "Lifetime Brands"
+            },
+            {
+              "ticker": "NWL",
+              "name": "Newell Brands"
+            },
+            {
+              "ticker": "PBH",
+              "name": "Prestige Brands"
+            },
+            {
+              "ticker": "REYN",
+              "name": "Reynolds Consumer Products"
+            },
+            {
+              "ticker": "SMG",
+              "name": "Scott's Miracle-Gro"
+            },
+            {
+              "ticker": "SPB",
+              "name": "Spectrum Brands"
+            },
+            {
+              "ticker": "WWW",
+              "name": "Wolverine Worldwide"
+            }
+          ]
+        },
+        {
+          "subsector": "Other Consumer Products / Services",
+          "tickers": [
+            {
+              "ticker": "VISANT",
+              "name": "Jostens"
+            },
+            {
+              "ticker": "MISCAR",
+              "name": "Mister Car Wash"
+            },
+            {
+              "ticker": "POLYCO",
+              "name": "Polyconcept"
+            },
+            {
+              "ticker": "VARBRA",
+              "name": "Varsity Brands"
+            },
+            {
+              "ticker": "PRMB",
+              "name": "Primo Water"
+            },
+            {
+              "ticker": "PRMWCN",
+              "name": "Primo Water"
+            },
+            {
+              "ticker": "ILPIND",
+              "name": "Ilpea"
+            },
+            {
+              "ticker": "SPRIND",
+              "name": "Springs Window Fashions"
+            },
+            {
+              "ticker": "CULLHO",
+              "name": "Culligan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sector": "Gaming, Lodging & Leisure",
+      "public_comps": [
+        {
+          "subsector": "Multi-Jurisdictional Gaming Operators",
+          "tickers": [
+            {
+              "ticker": "CZR-US",
+              "name": "Caesars Entertainment Inc"
+            },
+            {
+              "ticker": "MGM-US",
+              "name": "MGM Resorts International"
+            },
+            {
+              "ticker": "LVS-US",
+              "name": "Las Vegas Sands Corp"
+            },
+            {
+              "ticker": "WYNN-US",
+              "name": "Wynn Resorts Ltd"
+            }
+          ]
+        },
+        {
+          "subsector": "Regional Gaming Operators",
+          "tickers": [
+            {
+              "ticker": "PENN-US",
+              "name": "Penn Entertainment Inc"
+            },
+            {
+              "ticker": "CHDN-US",
+              "name": "Churchill Downs Inc"
+            },
+            {
+              "ticker": "BYD-US",
+              "name": "Boyd Gaming Corp"
+            },
+            {
+              "ticker": "RRR-US",
+              "name": "Red Rock Resorts Inc"
+            },
+            {
+              "ticker": "BALY-US",
+              "name": "Bally's Corp"
+            },
+            {
+              "ticker": "LUCK-US",
+              "name": "Lucky Strike Entertainment Corp"
+            },
+            {
+              "ticker": "GDEN-US",
+              "name": "Golden Entertainment Inc"
+            }
+          ]
+        },
+        {
+          "subsector": "Macau Gaming Operators",
+          "tickers": [
+            {
+              "ticker": "1928-HK",
+              "name": "Sands China Ltd"
+            },
+            {
+              "ticker": "1128-HK",
+              "name": "Wynn Macau Ltd"
+            },
+            {
+              "ticker": "2282-HK",
+              "name": "MGM China Holdings Ltd"
+            }
+          ]
+        },
+        {
+          "subsector": "Gaming REITs",
+          "tickers": [
+            {
+              "ticker": "VICI-US",
+              "name": "VICI Properties Inc"
+            },
+            {
+              "ticker": "GLPI-US",
+              "name": "Gaming and Leisure Properties Inc"
+            }
+          ]
+        },
+        {
+          "subsector": "Gaming Equipment & Technology",
+          "tickers": [
+            {
+              "ticker": "ALL-AU",
+              "name": "Aristocrat Leisure Ltd"
+            },
+            {
+              "ticker": "IGT-US",
+              "name": "Brightstar Lottery PLC"
+            },
+            {
+              "ticker": "LNW-US",
+              "name": "Light & Wonder Inc"
+            },
+            {
+              "ticker": "PLTK-US",
+              "name": "Playtika Holding Corp"
+            },
+            {
+              "ticker": "EVRI-US",
+              "name": "Everi Holdings Inc"
+            },
+            {
+              "ticker": "AGS-US",
+              "name": "PlayAGS Inc"
+            }
+          ]
+        },
+        {
+          "subsector": "Digital Gaming",
+          "tickers": [
+            {
+              "ticker": "FLTR-GB",
+              "name": "Flutter Entertainment PLC"
+            },
+            {
+              "ticker": "DKNG-US",
+              "name": "DraftKings Inc"
+            },
+            {
+              "ticker": "GENI-US",
+              "name": "Genius Sports Ltd"
+            },
+            {
+              "ticker": "SRAD-US",
+              "name": "Sportradar Group AG"
+            },
+            {
+              "ticker": "KAMBI-SE",
+              "name": "Kambi Group PLC"
+            }
+          ]
+        },
+        {
+          "subsector": "Theme Parks",
+          "tickers": [
+            {
+              "ticker": "PRKS-US",
+              "name": "United Parks & Resorts Inc"
+            },
+            {
+              "ticker": "SIX-US",
+              "name": "Six Flags Entertainment Corp/DE"
+            },
+            {
+              "ticker": "FUN-US",
+              "name": "Six Flags Entertainment Corp"
+            }
+          ]
+        },
+        {
+          "subsector": "Cruises",
+          "tickers": [
+            {
+              "ticker": "CCL-US",
+              "name": "Carnival Corp"
+            },
+            {
+              "ticker": "RCL-US",
+              "name": "Royal Caribbean Cruises Ltd"
+            },
+            {
+              "ticker": "NCLH-US",
+              "name": "Norwegian Cruise Line Holdings Ltd"
+            },
+            {
+              "ticker": "LIND-US",
+              "name": "Lindblad Expeditions Holdings Inc"
+            }
+          ]
+        },
+        {
+          "subsector": "Hotels & Resorts",
+          "tickers": [
+            {
+              "ticker": "HLT-US",
+              "name": "Hilton Worldwide Holdings Inc"
+            },
+            {
+              "ticker": "MAR-US",
+              "name": "Marriott International Inc/MD"
+            },
+            {
+              "ticker": "H-US",
+              "name": "Hyatt Hotels Corp"
+            },
+            {
+              "ticker": "IHG-GB",
+              "name": "InterContinental Hotels Group PLC"
+            },
+            {
+              "ticker": "CHH-US",
+              "name": "Choice Hotels International Inc"
+            },
+            {
+              "ticker": "WH-US",
+              "name": "Wyndham Hotels & Resorts Inc"
+            },
+            {
+              "ticker": "PLYA-US",
+              "name": "Playa Hotels & Resorts NV"
+            }
+          ]
+        },
+        {
+          "subsector": "Timeshare",
+          "tickers": [
+            {
+              "ticker": "VAC-US",
+              "name": "Marriott Vacations Worldwide Corp"
+            },
+            {
+              "ticker": "HGV-US",
+              "name": "Hilton Grand Vacations Inc"
+            },
+            {
+              "ticker": "TNL-US",
+              "name": "Travel + Leisure Co"
+            },
+            {
+              "ticker": "ABNB-US",
+              "name": "Airbnb Inc"
+            }
+          ]
+        },
+        {
+          "subsector": "Leisure Facilities",
+          "tickers": [
+            {
+              "ticker": "MTN-US",
+              "name": "Vail Resorts Inc"
+            },
+            {
+              "ticker": "LTH-US",
+              "name": "Life Time Group Holdings Inc"
+            },
+            {
+              "ticker": "BOWL-US",
+              "name": "Lucky Strike Entertainment Corp"
+            }
+          ]
+        },
+        {
+          "subsector": "Hotel REITS",
+          "tickers": [
+            {
+              "ticker": "SVC-US",
+              "name": "Service Properties Trust"
+            },
+            {
+              "ticker": "XHR-US",
+              "name": "Xenia Hotels & Resorts Inc"
+            },
+            {
+              "ticker": "PEB-US",
+              "name": "Pebblebrook Hotel Trust"
+            },
+            {
+              "ticker": "HST-US",
+              "name": "Host Hotels & Resorts Inc"
+            },
+            {
+              "ticker": "RHP-US",
+              "name": "Ryman Hospitality Properties Inc"
+            },
+            {
+              "ticker": "PK-US",
+              "name": "Park Hotels & Resorts Inc"
+            },
+            {
+              "ticker": "RLJ-US",
+              "name": "RLJ Lodging Trust"
+            },
+            {
+              "ticker": "DRH-US",
+              "name": "DiamondRock Hospitality Co"
+            }
+          ]
+        },
+        {
+          "subsector": "Asset-lite Gaming Operators",
+          "tickers": [
+            {
+              "ticker": "FLUT-US",
+              "name": "Flutter Entertainment PLC"
+            }
+          ]
+        }
+      ],
+      "credit_comps": [
+        {
+          "subsector": "Multi-Jurisdictional Gaming Operators",
+          "tickers": [
+            {
+              "ticker": "MGM",
+              "name": "MGM Resorts"
+            },
+            {
+              "ticker": "MGMCHI",
+              "name": "MGM China"
+            },
+            {
+              "ticker": "CZR",
+              "name": "Caesars Entertainment Inc"
+            },
+            {
+              "ticker": "WYNFIN",
+              "name": "Wynn Resorts Finance"
+            },
+            {
+              "ticker": "WYNNLV",
+              "name": "Wynn Las Vegas"
+            },
+            {
+              "ticker": "WYNMAC",
+              "name": "Wynn Macau"
+            },
+            {
+              "ticker": "LVS",
+              "name": "Las Vegas Sands"
+            },
+            {
+              "ticker": "SANLTD",
+              "name": "Sands China"
+            }
+          ]
+        },
+        {
+          "subsector": "Regional & Tribal Gaming Operators",
+          "tickers": [
+            {
+              "ticker": "PENN",
+              "name": "Penn National Gaming"
+            },
+            {
+              "ticker": "CHDN",
+              "name": "Churchill Downs"
+            },
+            {
+              "ticker": "BYD",
+              "name": "Boyd Gaming"
+            },
+            {
+              "ticker": "RRR",
+              "name": "Red Rock Resorts"
+            },
+            {
+              "ticker": "BALY",
+              "name": "Bally's"
+            },
+            {
+              "ticker": "NUGGET",
+              "name": "Fertitta Entertainment"
+            },
+            {
+              "ticker": "FRTITA",
+              "name": "Fertitta Entertainment"
+            },
+            {
+              "ticker": "GCCN",
+              "name": "Great Canadian"
+            },
+            {
+              "ticker": "ONGAME",
+              "name": "One Toronto Gaming"
+            },
+            {
+              "ticker": "GDEN",
+              "name": "Golden Entertainment"
+            },
+            {
+              "ticker": "RWLVLL",
+              "name": "Resorts World Las Vegas LLC"
+            },
+            {
+              "ticker": "RWLVCA",
+              "name": "Resorts World Las Vegas LLC"
+            },
+            {
+              "ticker": "RWNYNY",
+              "name": "Resorts World New York"
+            },
+            {
+              "ticker": "RWCATS",
+              "name": "Resorts World Catskills"
+            },
+            {
+              "ticker": "CNTY",
+              "name": "Century Casinos"
+            },
+            {
+              "ticker": "JACFIN",
+              "name": "Jack Entertainment"
+            },
+            {
+              "ticker": "SEMTRI",
+              "name": "Seminole Gaming"
+            },
+            {
+              "ticker": "SEMHRK",
+              "name": "Seminole Gaming"
+            },
+            {
+              "ticker": "MGENIA",
+              "name": "Mohegan"
+            },
+            {
+              "ticker": "MOHEGN",
+              "name": "Mohegan"
+            },
+            {
+              "ticker": "PCIGAM",
+              "name": "PCI Gaming"
+            },
+            {
+              "ticker": "FLL",
+              "name": "Full House Resorts"
+            },
+            {
+              "ticker": "AFFGAM",
+              "name": "Affinity Interactive"
+            },
+            {
+              "ticker": "JACENT",
+              "name": "Jacobs Entertainment"
+            },
+            {
+              "ticker": "MWGAME",
+              "name": "Midwest Gaming"
+            },
+            {
+              "ticker": "RIVENT",
+              "name": "Rivers Enterprise"
+            }
+          ]
+        },
+        {
+          "subsector": "Gaming REITs",
+          "tickers": [
+            {
+              "ticker": "VICI",
+              "name": "VICI Properties"
+            },
+            {
+              "ticker": "GLPI",
+              "name": "Gaming & Leisure Properties"
+            }
+          ]
+        },
+        {
+          "subsector": "Gaming Equipment & Technology",
+          "tickers": [
+            {
+              "ticker": "ALLAU",
+              "name": "Aristocrat"
+            },
+            {
+              "ticker": "BRSL",
+              "name": "International Game Technology"
+            },
+            {
+              "ticker": "IGTLOT",
+              "name": "International Game Technology"
+            },
+            {
+              "ticker": "LNW",
+              "name": "Light & Wonder"
+            },
+            {
+              "ticker": "SCGALO",
+              "name": "Light & Wonder"
+            },
+            {
+              "ticker": "EVRI",
+              "name": "Everi"
+            },
+            {
+              "ticker": "SAZKAG",
+              "name": "Allwyn"
+            },
+            {
+              "ticker": "PLTK",
+              "name": "Playtika RESTRICTED"
+            },
+            {
+              "ticker": "JJVEGA",
+              "name": "J&J Ventures Gaming"
+            }
+          ]
+        },
+        {
+          "subsector": "Digital Gaming",
+          "tickers": [
+            {
+              "ticker": "FLTR",
+              "name": "Flutter Entertainment"
+            },
+            {
+              "ticker": "DKNG",
+              "name": "Draftkings"
+            },
+            {
+              "ticker": "STATSL",
+              "name": "Stats Perform"
+            }
+          ]
+        },
+        {
+          "subsector": "Theme Parks",
+          "tickers": [
+            {
+              "ticker": "FUN",
+              "name": "Six Flags/Cedar Fair"
+            },
+            {
+              "ticker": "PRKS",
+              "name": "Seaworld"
+            },
+            {
+              "ticker": "HERFAM",
+              "name": "Herschend Family Entertainment"
+            },
+            {
+              "ticker": "MERLLN",
+              "name": "Merlin Entertainments"
+            }
+          ]
+        },
+        {
+          "subsector": "Ski Resorts",
+          "tickers": [
+            {
+              "ticker": "MTN",
+              "name": "Vail"
+            },
+            {
+              "ticker": "ALTMOU",
+              "name": "Alterra RESTRICTED"
+            },
+            {
+              "ticker": "BIGSKY",
+              "name": "Boyne"
+            }
+          ]
+        },
+        {
+          "subsector": "Cruises",
+          "tickers": [
+            {
+              "ticker": "CCL",
+              "name": "Carnival"
+            },
+            {
+              "ticker": "CCLNB",
+              "name": "Carnival"
+            },
+            {
+              "ticker": "RCL",
+              "name": "Royal Caribbean"
+            },
+            {
+              "ticker": "NCLH",
+              "name": "Norwegian"
+            },
+            {
+              "ticker": "VOCSXI",
+              "name": "Viking"
+            },
+            {
+              "ticker": "VIKCRU",
+              "name": "Viking"
+            },
+            {
+              "ticker": "LIND",
+              "name": "Lindblad Expeditions"
+            }
+          ]
+        },
+        {
+          "subsector": "Hotels & Resorts",
+          "tickers": [
+            {
+              "ticker": "HLT",
+              "name": "Hilton"
+            },
+            {
+              "ticker": "WH",
+              "name": "Wyndham Hotels"
+            },
+            {
+              "ticker": "CHH",
+              "name": "Choice Hotels"
+            },
+            {
+              "ticker": "MAR",
+              "name": "Marriott International Inc/MD"
+            },
+            {
+              "ticker": "HOT",
+              "name": "Marriott International Inc/MD"
+            },
+            {
+              "ticker": "FSHCN",
+              "name": "Four Seasons Hotels"
+            },
+            {
+              "ticker": "ORASTA",
+              "name": "OYO"
+            }
+          ]
+        },
+        {
+          "subsector": "Hotels and Resorts REIT",
+          "tickers": [
+            {
+              "ticker": "SVC",
+              "name": "Service Properties Trust"
+            },
+            {
+              "ticker": "XHR",
+              "name": "Xenia Hotels & Resorts Inc"
+            },
+            {
+              "ticker": "PEB",
+              "name": "Pebblebrook Hotel Trust"
+            },
+            {
+              "ticker": "RLJ",
+              "name": "RLJ Lodging Trust"
+            },
+            {
+              "ticker": "DRH",
+              "name": "DiamondRock Hospitality"
+            },
+            {
+              "ticker": "PK",
+              "name": "Park Hotel"
+            },
+            {
+              "ticker": "HST",
+              "name": "Host Hotels and Resorts"
+            },
+            {
+              "ticker": "RHP",
+              "name": "Ryman Hospitality Properties Inc"
+            }
+          ]
+        },
+        {
+          "subsector": "Timeshare & Alternative Stay",
+          "tickers": [
+            {
+              "ticker": "VAC",
+              "name": "Marriott Vacations"
+            },
+            {
+              "ticker": "TNL",
+              "name": "Travel + Leisure"
+            },
+            {
+              "ticker": "HGV",
+              "name": "Hilton Grand Vacations"
+            },
+            {
+              "ticker": "HGVLLC",
+              "name": "Hilton Grand Vacations"
+            },
+            {
+              "ticker": "ABNB",
+              "name": "Airbnb Inc"
+            }
+          ]
+        },
+        {
+          "subsector": "Gyms",
+          "tickers": [
+            {
+              "ticker": "LTH",
+              "name": "Life Time"
+            },
+            {
+              "ticker": "BAYCLU",
+              "name": "Bay Club"
+            },
+            {
+              "ticker": "LAFTNS",
+              "name": "LA Fitness"
+            },
+            {
+              "ticker": "UNIPFH",
+              "name": "United Planet Fitness"
+            }
+          ]
+        },
+        {
+          "subsector": "Leisure",
+          "tickers": [
+            {
+              "ticker": "CIRQUE",
+              "name": "Cirque du Soleil"
+            },
+            {
+              "ticker": "LUCK",
+              "name": "Bowlero"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sector": "Food Retail & Restaurants",
+      "public_comps": [
+        {
+          "subsector": "Retail - Consumer Staples",
+          "tickers": [
+            {
+              "ticker": "RAD-US",
+              "name": "Rite Aid Corp"
+            },
+            {
+              "ticker": "IMKTA-US",
+              "name": "Ingles Markets-A"
+            },
+            {
+              "ticker": "KR-US",
+              "name": "Kroger Co"
+            },
+            {
+              "ticker": "NGVC-US",
+              "name": "Natural Grocers"
+            },
+            {
+              "ticker": "SFM-US",
+              "name": "Sprouts Farmers"
+            },
+            {
+              "ticker": "WMK-US",
+              "name": "Weis Markets Inc"
+            },
+            {
+              "ticker": "BJ-US",
+              "name": "Bj'S Wholesale C"
+            },
+            {
+              "ticker": "SPTN-US",
+              "name": "Spartannash Co"
+            },
+            {
+              "ticker": "ARKO-US",
+              "name": "Arko Corp"
+            },
+            {
+              "ticker": "GO-US",
+              "name": "Grocery Outlet"
+            },
+            {
+              "ticker": "ACI-US",
+              "name": "Albertsons Cos-A"
+            }
+          ]
+        },
+        {
+          "subsector": "Wholesale - Consumer Staples",
+          "tickers": [
+            {
+              "ticker": "SYY-US",
+              "name": "Sysco Corp"
+            },
+            {
+              "ticker": "PFGC-US",
+              "name": "Performance Food"
+            },
+            {
+              "ticker": "CHEF-US",
+              "name": "Chefs Warehouse"
+            },
+            {
+              "ticker": "UNFI-US",
+              "name": "United Natural"
+            },
+            {
+              "ticker": "CVGW-US",
+              "name": "Calavo Growers I"
+            },
+            {
+              "ticker": "USFD-US",
+              "name": "Us Foods Holding"
+            }
+          ]
+        },
+        {
+          "subsector": "Oil & Gas Supply Chain",
+          "tickers": [
+            {
+              "ticker": "MUSA-US",
+              "name": "Murphy Usa Inc"
+            }
+          ]
+        },
+        {
+          "subsector": "Commercial Support Services",
+          "tickers": [
+            {
+              "ticker": "ARMK-US",
+              "name": "Aramark"
+            }
+          ]
+        },
+        {
+          "subsector": "Leisure Facilities & Services",
+          "tickers": [
+            {
+              "ticker": "ARCO-US",
+              "name": "Arcos Dorados-A"
+            },
+            {
+              "ticker": "PTLO-US",
+              "name": "Portillo'S-Cl A"
+            },
+            {
+              "ticker": "PZZA-US",
+              "name": "Papa John'S Intl"
+            },
+            {
+              "ticker": "QSR-US",
+              "name": "Restaurant Brand"
+            },
+            {
+              "ticker": "YUM-US",
+              "name": "Yum! Brands Inc"
+            },
+            {
+              "ticker": "WEN-US",
+              "name": "Wendy'S Co/The"
+            },
+            {
+              "ticker": "BLMN-US",
+              "name": "Bloomin' Brands"
+            },
+            {
+              "ticker": "EAT-US",
+              "name": "Brinker Intl"
+            },
+            {
+              "ticker": "PLAY-US",
+              "name": "Dave & Buster'S"
+            }
+          ]
+        }
+      ],
+      "credit_comps": [
+        {
+          "subsector": "Foodservice Distributors",
+          "tickers": [
+            {
+              "ticker": "SYY",
+              "name": "Sysco"
+            },
+            {
+              "ticker": "USFOOD",
+              "name": "US Foods"
+            },
+            {
+              "ticker": "GLDNST",
+              "name": "Golden State Foods"
+            },
+            {
+              "ticker": "PFGC",
+              "name": "Performance Foods"
+            },
+            {
+              "ticker": "CHEF",
+              "name": "Chef's Warehouse"
+            }
+          ]
+        },
+        {
+          "subsector": "Grocery Distributors",
+          "tickers": [
+            {
+              "ticker": "UNFI",
+              "name": "United Natural Foods"
+            },
+            {
+              "ticker": "CSWHOL",
+              "name": "C&S Wholesale Grocers"
+            },
+            {
+              "ticker": "KEHEFO",
+              "name": "KeHE Distributors Inc"
+            }
+          ]
+        },
+        {
+          "subsector": "Food & Drug Stores",
+          "tickers": [
+            {
+              "ticker": "ACI",
+              "name": "Albertsons"
+            },
+            {
+              "ticker": "SWY",
+              "name": "Albertsons"
+            },
+            {
+              "ticker": "NEWALB",
+              "name": "Albertsons"
+            },
+            {
+              "ticker": "BJ",
+              "name": "BJ's Wholesale"
+            },
+            {
+              "ticker": "IMKTA",
+              "name": "Ingles Market"
+            }
+          ]
+        },
+        {
+          "subsector": "C-Stores / Fuel Retailers",
+          "tickers": [
+            {
+              "ticker": "UNIPAC",
+              "name": "United Pacific"
+            },
+            {
+              "ticker": "BWGCON",
+              "name": "Yesway"
+            },
+            {
+              "ticker": "MUSA",
+              "name": "Murphy"
+            },
+            {
+              "ticker": "TRTENE",
+              "name": "Arko"
+            },
+            {
+              "ticker": "PRICON",
+              "name": "Arko"
+            },
+            {
+              "ticker": "ARKO",
+              "name": "Arko"
+            }
+          ]
+        },
+        {
+          "subsector": "Facility Services",
+          "tickers": [
+            {
+              "ticker": "ALIGRP",
+              "name": "Ali Group"
+            },
+            {
+              "ticker": "ARMK",
+              "name": "Aramark"
+            },
+            {
+              "ticker": "IMPPAP",
+              "name": "Imperial Dade"
+            },
+            {
+              "ticker": "TRIMUS",
+              "name": "Trimark"
+            }
+          ]
+        },
+        {
+          "subsector": "Restaurants | Franchisors",
+          "tickers": [
+            {
+              "ticker": "BCULC",
+              "name": "Restaurant Brands"
+            },
+            {
+              "ticker": "YUM",
+              "name": "Yum! Brands"
+            },
+            {
+              "ticker": "ARGIHC",
+              "name": "Inspire Brands"
+            },
+            {
+              "ticker": "ARBFND",
+              "name": "Inspire Brands"
+            },
+            {
+              "ticker": "PZZA",
+              "name": "Papa John's"
+            }
+          ]
+        },
+        {
+          "subsector": "Restaurants | Franchisees",
+          "tickers": [
+            {
+              "ticker": "FLYRES",
+              "name": "Flynn Restaurant Group"
+            },
+            {
+              "ticker": "GPSHOH",
+              "name": "GPS Hospitality"
+            },
+            {
+              "ticker": "KMACHO",
+              "name": "K-Mac"
+            },
+            {
+              "ticker": "PACBEL",
+              "name": "Pacific Bells"
+            },
+            {
+              "ticker": "SIZPLT",
+              "name": "Sizzling Platter"
+            },
+            {
+              "ticker": "TACALA",
+              "name": "Tacala"
+            }
+          ]
+        },
+        {
+          "subsector": "Restaurants | Owner Operators",
+          "tickers": [
+            {
+              "ticker": "BLMN",
+              "name": "Bloomin Brands"
+            },
+            {
+              "ticker": "EAT",
+              "name": "Brinker"
+            },
+            {
+              "ticker": "PLAY",
+              "name": "Dave & Busters"
+            },
+            {
+              "ticker": "FOGO",
+              "name": "Fogo De Chao"
+            },
+            {
+              "ticker": "MILALE",
+              "name": "Miller's Ale House"
+            },
+            {
+              "ticker": "PFCB",
+              "name": "PF Chang's"
+            },
+            {
+              "ticker": "PORTIL",
+              "name": "Portillo's"
+            },
+            {
+              "ticker": "RZNCAN",
+              "name": "Raising Canes"
+            },
+            {
+              "ticker": "WHABRA",
+              "name": "Whataburger"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

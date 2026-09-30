@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: data_access
+Version: 0.0.0
+Summary: data access package (for trace, wso); uses spark
+Author: argus_admin
+Requires-Dist: pandas==2.1.1
+Requires-Dist: pyarrow==17.0.0
+Requires-Dist: pyodbc
+Requires-Dist: findspark
+Requires-Dist: databricksapi
+Requires-Dist: azure-storage-blob
+Requires-Dist: xlrd
+Requires-Dist: openpyxl
+Requires-Dist: tables
+Requires-Dist: paramiko
+Requires-Dist: cryptography==46.0.7
+Requires-Dist: databricks-sql-connector
+Requires-Dist: ray[default]
+Requires-Dist: duckdb==1.4.1
+Requires-Dist: psycopg2
+Requires-Dist: deltalake==0.17.3
+Requires-Dist: inflect
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary

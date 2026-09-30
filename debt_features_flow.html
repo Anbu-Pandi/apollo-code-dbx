@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Debt Features — Build Flow</title>
+<style>
+  :root { --ink:#152238; --muted:#637087; --line:#aebbd0; --blue:#e7f0ff; --green:#e5f7ef; --amber:#fff3d7; --purple:#f0eaff; --red:#fde9e7; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:14px/1.45 Inter,Segoe UI,Arial,sans-serif; color:var(--ink); background:#f7f9fc; }
+  header { background:#152238; color:#fff; padding:27px max(24px,calc((100% - 1320px)/2)); }
+  h1 { margin:0 0 6px; font-size:26px; } header p { margin:0; color:#d7e0ef; }
+  main { max-width:1320px; margin:25px auto 45px; padding:0 20px; }
+  .note { padding:13px 16px; border-left:5px solid #d68a00; background:var(--amber); margin-bottom:22px; border-radius:4px; }
+  .legend { display:flex; gap:16px; flex-wrap:wrap; margin:0 0 23px; color:var(--muted); } .legend span { display:flex; align-items:center; gap:6px; }
+  .dot { width:12px; height:12px; border-radius:3px; display:inline-block; }
+  .flow { display:flex; flex-direction:column; align-items:center; gap:0; }
+  .row { width:100%; display:flex; justify-content:center; gap:18px; flex-wrap:wrap; }
+  .box { width:245px; min-height:100px; border:1px solid #c7d2e3; border-radius:10px; padding:14px 15px; background:#fff; box-shadow:0 2px 7px #1c2b4210; }
+  .box h3 { font-size:15px; margin:0 0 7px; } .box p,.box ul { margin:0; color:#445168; font-size:12.5px; } .box ul { padding-left:17px; }
+  .source { background:var(--blue); } .transform { background:var(--green); } .enrich { background:var(--purple); } .derive { background:#eef8e0; } .output { background:var(--red); border-width:2px; }
+  .arrow { height:45px; width:2px; background:var(--line); position:relative; margin:0 auto; } .arrow:after { content:""; position:absolute; left:-5px; bottom:-1px; border-left:6px solid transparent; border-right:6px solid transparent; border-top:8px solid var(--line); }
+  .stage { width:100%; text-align:center; font-weight:700; color:#506078; margin:7px 0 10px; letter-spacing:.04em; font-size:11px; text-transform:uppercase; }
+  .wide { width:min(860px,100%); } code { background:#ffffff90; padding:1px 4px; border-radius:3px; font-size:12px; }
+  .dashed { border-style:dashed; } .foot { margin-top:25px; padding:16px; color:#48566e; background:#fff; border:1px solid #d8e0ed; border-radius:8px; }
+  @media (max-width:600px) { .box { width:100%; } .arrow { height:28px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Debt Features: Denormalized Data Build Flow</h1>
+  <p>Primary builder: <code>dash_reports/issuer_debt_in_index/data/debt.py → get_debt_df()</code></p>
+</header>
+<main>
+  <div class="note"><strong>Scope finding:</strong> <code>get_debt_df()</code> creates the final wide/in-memory DataFrame. In the analyzed production code, no active write/insert into <code>dbo.debt_features</code> was found. The datastore and scheduled task read that table; its persistence job appears external to this flow.</div>
+  <div class="legend"><span><i class="dot" style="background:#cfe1ff"></i>source datasets</span><span><i class="dot" style="background:#ccefdc"></i>transform / combine</span><span><i class="dot" style="background:#e3d6ff"></i>enrichment</span><span><i class="dot" style="background:#fde0dc"></i>output / persistence boundary</span></div>
+
+  <section class="flow">
+    <div class="stage">1 — Extract source data</div>
+    <div class="row">
+      <div class="box source"><h3>Bond universe</h3><p><code>get_bond_df(asof_date)</code></p><ul><li>ICE bond data</li><li>reference data / seniority</li><li>beta, volume, ETF change</li><li>OAS percentile, optional PECS</li></ul></div>
+      <div class="box source"><h3>Loan universe</h3><p><code>get_loan_df(asof_date)</code></p><ul><li>JPM loan data</li><li>Markit loan price</li><li>loan beta / risk / OAS percentile</li></ul></div>
+      <div class="box source"><h3>CDS universe</h3><p><code>get_cds_df(asof_date)</code></p><ul><li>Markit CDS pricing</li><li>CDS returns and percentile</li><li>IRS par rates / maturity dates</li></ul></div>
+      <div class="box source"><h3>Supporting sources</h3><ul><li><code>get_fx</code> spot FX history</li><li><code>get_issuer_id_df</code></li><li>FactSet / Findox / Markit / GeoRev</li></ul></div>
+    </div>
+    <div class="arrow"></div>
+
+    <div class="stage">2 — Normalize and combine instruments</div>
+    <div class="box transform wide"><h3>Filter, map, union</h3><ul><li>Create ticker universe from bonds and loans; retain matching CDS by ticker or ISIN.</li><li>Resolve CDS tickers from bond ISIN mappings.</li><li>Rename source-specific columns using <code>BOND_COL_MAP</code> and <code>LOAN_COL_MAP</code>.</li><li><code>pd.concat([bonds, loans, cds])</code> creates one instrument-level dataset.</li><li>Restrict to available fields in <code>SELECT_COLUMNS</code>; merge issuer identifiers.</li></ul></div>
+    <div class="arrow"></div>
+
+    <div class="stage">3 — Market and identifier enrichment</div>
+    <div class="row">
+      <div class="box enrich"><h3>Equity linkage</h3><p><code>merge_factset_equity_tickers</code></p><p>Map bonds to FactSet equity IDs/ticker region.</p></div>
+      <div class="box enrich"><h3>Equity market data</h3><p><code>merge_factset_equity_returns</code></p><p>Add equity price, market cap, volatility and return context; adds Equity rows.</p></div>
+      <div class="box transform"><h3>FX normalization</h3><p><code>adjust_fx_amt_fields</code></p><p>Convert issued/outstanding amounts to USD.</p><p><code>adjust_fx_oas</code> adds cross-currency basis-adjusted OAS/yield.</p></div>
+    </div>
+    <div class="arrow"></div>
+
+    <div class="stage">4 — Instrument features and issuer curves</div>
+    <div class="row">
+      <div class="box derive"><h3>Derived classifications</h3><p><code>map_columns_debt_df</code></p><ul><li>deduplicate instrument IDs</li><li>rating bucket</li><li>maturity years / bucket</li><li>secured/unsecured group</li></ul></div>
+      <div class="box derive"><h3>Issuer curve engine <small>(optional)</small></h3><p><code>add_issuer_curve_implied_spreads</code></p><ul><li>build SEC / UNSEC issuer curves</li><li>apply maturity and tenor spreads</li><li>calculate relative curve spreads</li></ul></div>
+    </div>
+    <div class="arrow"></div>
+
+    <div class="stage">5 — Returns, financials, and controls</div>
+    <div class="row">
+      <div class="box enrich"><h3>Return attribution</h3><p><code>get_index_period_returns</code> + <code>add_explain_returns</code></p><p>Add index, beta, alpha, and bond-point return decomposition for DTD/1W/MTD/1M/QTD/YTD.</p></div>
+      <div class="box enrich"><h3>FactSet / Findox data</h3><ul><li><code>merge_factset_dcs</code></li><li><code>merge_factset_financials</code></li><li><code>merge_findox_financials</code></li><li>USD financial conversion</li><li><code>merge_factset_estimates</code></li></ul></div>
+      <div class="box enrich"><h3>Issuer and compliance</h3><ul><li>issuer amount outstanding</li><li><code>merge_restriction_df</code></li><li>restricted issuer flag</li></ul></div>
+    </div>
+    <div class="arrow"></div>
+
+    <div class="stage">6 — Final enrichment and output</div>
+    <div class="box transform wide"><h3>Final data-quality / enrichment pass</h3><ul><li>Recalculate maturity fields and default missing <code>secured_unsecured</code> to <code>UNSEC</code>.</li><li><code>merge_georev</code>: geographic revenue data for bonds.</li><li><code>merge_markit_bond_pricing</code>: prefer available Markit price, OAS, yield, and duration values.</li><li><code>_merge_industry_by_ticker</code>: fill consistent industry hierarchy by ticker.</li><li><code>fill_ticker_level_details</code>: fill issuer/ticker-level identifiers, curve values, country, equity and geographic fields.</li></ul></div>
+    <div class="arrow"></div>
+    <div class="box output wide"><h3>Final denormalized DataFrame</h3><p><code>return debt_df</code></p><p>One wide dataset containing Bond, Loan, CDS, and Equity rows with market, curve, return, issuer, financial, restriction, geographic, and identifier attributes.</p></div>
+    <div class="arrow"></div>
+    <div class="box output dashed wide"><h3>Persistence boundary — not implemented in this analyzed path</h3><p>Expected external step: call <code>get_debt_df(...)</code>, then write/append/replace the result in <code>dbo.debt_features</code>.</p><p>Known reader: <code>DataStore.get_issuer_debt_df()</code> in <code>dash_reports/report_common/data/data_model.py</code>, which executes <code>SELECT * FROM dbo.debt_features WHERE asof_date = ...</code>.</p></div>
+  </section>
+  <div class="foot"><strong>Scheduled consumer:</strong> <code>dash_reports/tasks.py → update_issuer_debt_df()</code> runs daily at 07:00, but only caches/reads the existing <code>dbo.debt_features</code> table; it does not build or insert it.</div>
+</main>
+</body>
+</html>

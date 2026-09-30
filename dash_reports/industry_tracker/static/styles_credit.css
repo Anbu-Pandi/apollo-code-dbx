@@ -1,0 +1,163 @@
+﻿<style>
+/* ---- Credit Comps tab styling, matched to Public Comps aesthetic ---- */
+
+#tab-credit-comps .summary-title {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600; font-size: 13px; color: var(--saxe-blue);
+    padding: 6px 0; letter-spacing: 0.3px; text-transform: uppercase;
+}
+#tab-credit-comps .summary-title .hint {
+    font-weight: 300; font-size: 11px; color: var(--grey);
+    text-transform: none; letter-spacing: 0; margin-left: 8px;
+}
+#tab-credit-comps .table-wrap { overflow-x: auto; margin-bottom: 24px; background: var(--white); }
+#tab-credit-comps table {
+    border-collapse: collapse; width: 100%;
+    font-family: Calibri, 'Segoe UI', sans-serif; font-size: 11px;
+}
+#tab-credit-comps th {
+    background: var(--header-bg); color: var(--grey);
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.4px;
+    padding: 8px 10px; text-align: center;
+    border-bottom: 2px solid var(--ecru); vertical-align: middle;
+}
+#tab-credit-comps th.num { text-align: center; }
+#tab-credit-comps th.group-header {
+    text-align: center; background: var(--header-bg); color: var(--grey);
+    border-bottom: 1px solid var(--ecru);
+    border-left: 1px solid var(--ecru); border-right: 1px solid var(--ecru);
+    font-weight: 700; padding: 6px 8px;
+}
+#tab-credit-comps th.sub {
+    background: rgba(85, 88, 90, 0.08);
+    font-size: 9px; font-weight: 600; text-transform: none; letter-spacing: 0;
+    padding: 3px 6px; text-align: center;
+}
+#tab-credit-comps th .sub-label {
+    font-size: 9px; font-weight: 400; color: var(--grey); text-transform: none;
+}
+#tab-credit-comps td {
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: middle; font-size: 11px;
+}
+#tab-credit-comps td.num { text-align: center; font-variant-numeric: tabular-nums; }
+#tab-credit-comps td.pos { color: var(--positive); }
+#tab-credit-comps td.neg { color: var(--negative); }
+
+#tab-credit-comps .credit-summary-table { table-layout: fixed; min-width: 1200px; }
+#tab-credit-comps .credit-summary-table col.col-subsector { width: 220px; }
+#tab-credit-comps .credit-summary-table col.col-metric { width: 80px; }
+#tab-credit-comps .credit-summary-table col.col-mult   { width: 72px; }
+#tab-credit-comps .credit-summary-table th, #tab-credit-comps .credit-summary-table td {
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+#tab-credit-comps .credit-summary-table thead th { white-space: normal; line-height: 1.2; }
+#tab-credit-comps .credit-summary-table td.subsector-name {
+    text-align: left; font-weight: 700; color: var(--black);
+    font-size: 11px; white-space: nowrap;
+}
+#tab-credit-comps .credit-summary-table tr.sector-link { cursor: pointer; }
+#tab-credit-comps .credit-summary-table tr.sector-link:hover { background: var(--row-hover); }
+#tab-credit-comps .credit-summary-table tr.sector-link:hover td.subsector-name { text-decoration: underline; }
+#tab-credit-comps .credit-summary-table thead th { position: sticky; top: 0; z-index: 10; }
+
+#tab-credit-comps .credit-segment { margin-top: 32px; scroll-margin-top: 60px; }
+#tab-credit-comps .credit-segment-title {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 700; font-size: 14px; color: var(--apollo-green);
+    padding: 8px 0 8px 12px;
+    border-left: 3px solid var(--apollo-green);
+    margin-bottom: 6px; letter-spacing: 0.3px; text-transform: uppercase;
+    display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+}
+#tab-credit-comps .credit-segment-title .seg-meta {
+    font-weight: 400; font-size: 11px; color: var(--grey);
+    text-transform: none; letter-spacing: 0;
+}
+
+#tab-credit-comps .detail-table { table-layout: fixed; min-width: 1320px; }
+#tab-credit-comps .detail-table col.col-security { width: 220px; }
+#tab-credit-comps .detail-table col.col-rank    { width: 80px; }
+#tab-credit-comps .detail-table col.col-type    { width: 62px; }
+#tab-credit-comps .detail-table col.col-size    { width: 78px; }
+#tab-credit-comps .detail-table col.col-px      { width: 62px; }
+#tab-credit-comps .detail-table col.col-coup    { width: 65px; }
+#tab-credit-comps .detail-table col.col-spread  { width: 70px; }
+#tab-credit-comps .detail-table col.col-date    { width: 70px; }
+#tab-credit-comps .detail-table col.col-rating  { width: 80px; }
+#tab-credit-comps .detail-table col.col-yield   { width: 65px; }
+#tab-credit-comps .detail-table col.col-chg     { width: 65px; }
+#tab-credit-comps .detail-table col.col-mult    { width: 60px; }
+#tab-credit-comps .detail-table col.col-pct     { width: 65px; }
+#tab-credit-comps .detail-table th, #tab-credit-comps .detail-table td {
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+#tab-credit-comps .detail-table thead th { white-space: normal; line-height: 1.2; }
+
+#tab-credit-comps .issuer-header-row td {
+    background: var(--white);
+    border-top: 1px solid var(--ecru);
+    border-bottom: none;
+    padding: 8px 10px 4px 10px; text-align: left;
+}
+#tab-credit-comps .issuer-header-row.first-issuer td { border-top: none; }
+#tab-credit-comps .issuer-header-content {
+    display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+}
+#tab-credit-comps .issuer-name {
+    font-weight: 700; font-size: 12px; color: var(--black); letter-spacing: 0.1px;
+}
+#tab-credit-comps .issuer-meta { font-size: 10.5px; color: var(--grey); font-weight: 400; }
+#tab-credit-comps .issuer-rating {
+    background: var(--white); border: 1px solid var(--ecru);
+    padding: 1px 6px; border-radius: 3px;
+    font-weight: 600; color: var(--saxe-blue); font-size: 10px;
+}
+
+#tab-credit-comps .tranche-row td {
+    border-bottom: 1px dashed var(--border-light);
+    padding: 4px 10px;
+}
+#tab-credit-comps .tranche-row:hover { background: var(--row-hover); }
+#tab-credit-comps .tranche-row td.security-name {
+    text-align: left; padding-left: 24px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10.5px; color: var(--grey); white-space: nowrap;
+}
+
+#tab-credit-comps .summary-row td {
+    background: #EDF5F3; color: var(--black);
+    font-weight: 700; font-size: 11px;
+    border-top: none; border-bottom: none;
+    padding: 6px 10px;
+}
+#tab-credit-comps .mean-row td { border-top: 2px solid var(--apollo-green); }
+#tab-credit-comps .median-row td { border-bottom: 2px solid var(--apollo-green); }
+#tab-credit-comps .summary-row td.summary-label {
+    color: var(--apollo-green); text-transform: uppercase;
+    font-size: 10px; letter-spacing: 0.5px;
+    padding-left: 10px; text-align: left; font-weight: 700;
+}
+
+#tab-credit-comps .rank-pill, #tab-credit-comps .type-pill {
+    display: inline-block; padding: 1px 7px; border-radius: 3px;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.2px;
+    border: 1px solid var(--border-light); background: var(--white); color: var(--grey);
+}
+#tab-credit-comps .rank-1l    { background: #E8F1ED; color: var(--apollo-green); border-color: var(--apollo-green); }
+#tab-credit-comps .rank-2l    { background: #EFF3E5; color: #6B7A3F; border-color: #A8B574; }
+#tab-credit-comps .rank-unsec { background: #F1E8DC; color: #6B4F2E; border-color: #8B6F4E; }
+#tab-credit-comps .rank-sub   { background: #FBE7E5; color: var(--matchstick); border-color: var(--matchstick); }
+#tab-credit-comps .type-loan { background: rgba(57, 88, 120, 0.08); color: var(--saxe-blue); border-color: var(--saxe-blue); }
+#tab-credit-comps .type-bond { background: rgba(115, 162, 211, 0.12); color: #2A5C8A; border-color: var(--sky-blue); }
+
+#tab-credit-comps .px-distressed { color: var(--matchstick); font-weight: 600; }
+#tab-credit-comps .px-stressed { color: var(--orange); font-weight: 600; }
+
+#tab-credit-comps .source-note {
+    margin-top: 24px; padding: 10px 14px; background: var(--summary-bg);
+    border-left: 3px solid var(--ecru); font-size: 10.5px; color: var(--grey);
+    font-style: italic; line-height: 1.5;
+}

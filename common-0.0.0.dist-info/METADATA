@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: common
+Version: 0.0.0
+Summary: apo common
+Author: argus_admin
+Requires-Dist: sqlalchemy
+Requires-Dist: jaydebeapi
+Requires-Dist: pymssql
+Requires-Dist: pyodbc
+Requires-Dist: pretty_html_table
+Requires-Dist: holidays
+Requires-Dist: snowflake-connector-python==4.3.0
+Requires-Dist: cryptography==46.0.7
+Requires-Dist: pyOpenSSL==25.3.0
+Requires-Dist: pip_system_certs
+Requires-Dist: matplotlib==3.7.2
+Requires-Dist: pandas_market_calendars
+Requires-Dist: psutil
+Requires-Dist: pywin32>=310; sys_platform == "win32"
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary

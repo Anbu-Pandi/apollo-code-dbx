@@ -1,0 +1,16 @@
+﻿<style id="altd-styles">
+.macro-header{display:flex;justify-content:space-between;align-items:flex-start;padding:20px 0 14px;border-bottom:1px solid var(--border-light);margin-bottom:20px}
+.macro-header-left .macro-title{display:block;font-family:'Garamond','EB Garamond',serif;font-size:19px;color:var(--apollo-green);margin-bottom:4px}
+.macro-header-left .macro-subtitle{display:block;font-size:11px;color:var(--text-secondary);font-family:Calibri,sans-serif}
+.altd-block{margin-bottom:36px}
+.altd-block-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border-light)}
+.altd-block-title{font-family:'Garamond','EB Garamond',serif;font-size:15px;color:var(--text);font-weight:400}
+.altd-block-meta{font-size:10px;color:var(--text-secondary);font-family:Calibri,sans-serif;margin-top:2px}
+.macro-view-toggle{display:flex;gap:0;border:1px solid var(--border);border-radius:3px;overflow:hidden}
+.macro-view-btn{padding:4px 12px;font-size:11px;font-family:Calibri,sans-serif;background:var(--white);color:var(--grey);border:none;cursor:pointer;transition:background .15s}
+.macro-view-btn.active{background:var(--apollo-green);color:#fff}
+.macro-chart-outer{position:relative;width:100%;height:380px;margin-bottom:4px}
+.macro-ticker-controls{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.macro-ticker-controls label{font-size:11px;color:var(--grey);font-family:Calibri,sans-serif}
+.macro-select{font-family:Calibri,sans-serif;font-size:12px;padding:4px 8px;border:1px solid var(--border);border-radius:3px;color:var(--text);background:var(--white);min-width:260px}
+.macro-select:focus{outline:none;border-color:var(--apollo-green)}

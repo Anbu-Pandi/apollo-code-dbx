@@ -1,0 +1,91 @@
+/* 
+ * Loading state fixes - keeps content visible during callbacks
+ * Filename starts with 'z_' to ensure it loads last and overrides other styles
+ */
+
+/* Force all content within loading containers to stay visible */
+._dash-loading[data-dash-is-loading="true"] > div:not(._dash-loading-callback),
+._dash-loading[data-dash-is-loading="true"] > *:not(._dash-loading-callback) {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* Prevent Dash from hiding page content */
+#page-content-dynamic[data-dash-is-loading="true"],
+#page-content-dynamic-1[data-dash-is-loading="true"],
+#page-content-static[data-dash-is-loading="true"] {
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    display: block !important;
+}
+
+/* Keep all children of page content visible */
+#page-content-dynamic > *,
+#page-content-dynamic-1 > *,
+#page-content-static > * {
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    display: block !important;
+}
+
+/* Specific fix for chat interface */
+#chat-messages {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+#chat-messages > * {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.chat-message {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+}
+
+/* Loading wrapper should not hide content */
+.loading-wrapper[data-dash-is-loading="true"] > *:not(._dash-loading-callback) {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+}
+
+/* Ensure loading spinner overlay doesn't interfere */
+._dash-loading-callback {
+    pointer-events: all !important;
+}
+
+/* But keep content interactive blocked during loading */
+._dash-loading[data-dash-is-loading="true"] {
+    pointer-events: none !important;
+}
+
+/* Exception: the spinner itself should be clickable */
+._dash-loading[data-dash-is-loading="true"] ._dash-loading-callback {
+    pointer-events: all !important;
+}
+
+/* Fix for any inline styles Dash might apply */
+[style*="display: none"][data-dash-is-loading],
+[style*="visibility: hidden"][data-dash-is-loading] {
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Additional safeguards */
+div._dash-loading > div:first-child:not(._dash-loading-callback) {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+}
+

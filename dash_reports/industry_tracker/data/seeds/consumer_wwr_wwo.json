@@ -1,0 +1,44 @@
+{
+  "industry": "consumer",
+  "schema_version": 1,
+  "wwr": [
+    {
+      "title": "Beauty: Why prestige skincare keeps stealing share from masstige",
+      "source": "WSJ \u00b7 Apr 25",
+      "body": "<p>Prestige skincare gained <b>+340bps</b> of share over the past 18 months as consumers traded up at department stores and pharmacies. Implications for ELF, COTY, EL.</p><ul><li>ELF: best-positioned at masstige price-points</li><li>EL: NA travel retail still soft</li></ul>"
+    },
+    {
+      "title": "Off-mall apparel \u2014 traffic snapshot weekly update",
+      "source": "Placer.ai \u00b7 Apr 24",
+      "body": "<p>Mall traffic <b>-2.1%</b> y/y in week ended Apr 21 vs off-mall <b>+1.4%</b>. Best-in-class: TJX, ROST, ANF outdoor.</p>"
+    },
+    {
+      "title": "Home improvement \u2014 pro vs DIY split deepening",
+      "source": "Internal note \u00b7 Apr 23",
+      "body": "<p>HD pro segment up <b>~6%</b>, DIY flat. LOW pro mix lighter. Watch SWK, MAS, FBHS print for confirmation.</p>"
+    }
+  ],
+  "wwo": [
+    {
+      "title": "PROJECT WHITE \u2014 prestige beauty carve-out",
+      "status": "Active diligence",
+      "sector": "Beauty and Personal Care",
+      "owner": "Coverage \u00b7 J. Smith",
+      "body": "<p>Diligence call set for Apr 30. Indicative bid window May 12-19. Latest model assumes <b>16-18x EV/EBITDA</b> entry on $480M FY1 EBITDA.</p>"
+    },
+    {
+      "title": "PROJECT GRANITE \u2014 home improvement retail roll-up",
+      "status": "Monitor",
+      "sector": "Home Improvement Retail",
+      "owner": "Coverage \u00b7 K. Patel",
+      "body": "<p>Tracking 4 platform candidates. Trigger: 1Q26 print + comp guidance. No active process.</p>"
+    },
+    {
+      "title": "PROJECT IVORY \u2014 luxury accessories minority",
+      "status": "Completed",
+      "sector": "Luxury",
+      "owner": "Coverage \u00b7 R. Lee",
+      "body": "<p>Closed Mar 2026. Initial mark <b>+3.2%</b> over cost. Quarterly NAV update due.</p>"
+    }
+  ]
+}

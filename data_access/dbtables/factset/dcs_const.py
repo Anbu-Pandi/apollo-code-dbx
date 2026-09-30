@@ -1,0 +1,76 @@
+FACTSET_DCS_SQL = """
+SELECT
+  dd.DETAIL_ID,
+  dd.ISSUANCE_CURRENCY,
+  dd.ISSUE_DATE,
+  CAST(concat(dd.MATURITY_YEAR, '-',dd.MATURITY_YEAR_MONTH, '-',dd.MATURITY_YEAR_DAY) AS date) AS MATURITY_DATE,
+  CASE WHEN dd.COUPON_CODE = 'V' THEN CONCAT(dd.COUPON_INDEX, '+', dd.COUPON_MARGIN_MIN)
+  ELSE CAST(dd.COUPON_RATE_MIN AS STRING) END AS COUPON,  
+  dd.FACTSET_ENTITY_ID,
+  ec.ENTITY_PROPER_NAME,
+  tr.ticker_region,
+  dd.REPORT_DATE,
+  imap.ISSUE_TYPE_DESC, 
+  dd.INSTRUMENT_DESCRIPTION,
+  dmap.DEBT_DESC,
+  dsmap.SENIORITY_DESC,
+--  c.CUSIP,
+  isn.ISIN,
+  bbg.BBG_ID,
+  bbg.BBG_TICKER,
+  dd.CURRENCY,
+  dd.ISSUE_AMOUNT,
+  dd.OS_AMOUNT,
+  dd.AVAIL_AMOUNT,
+  dd.BORROWING_BASE,
+  dmap.ISSUE_TYPE,
+  dd.DEBT_CODE,
+  dmap.SENIORITY_CODE
+FROM FACTSET_DB.DCS_V2.DCS_DETAILS as dd
+--LEFT JOIN FACTSET_DB.SYM_V1.SYM_CUSIP c on c.fsym_id = dd.instrument_id
+LEFT JOIN FACTSET_DB.SYM_V1.SYM_ISIN isn on isn.fsym_id = dd.instrument_id
+LEFT JOIN FACTSET_DB.SYM_V1.SYM_BBG bbg on bbg.fsym_id = dd.instrument_id
+LEFT JOIN FACTSET_DB.REF_V2.DCS_DEBT_MAP as dmap
+  ON dd.debt_code = dmap.debt_code
+LEFT JOIN FACTSET_DB.REF_V2.DCS_SENIORITY_MAP as dsmap
+  ON dsmap.SENIORITY_CODE = dmap.SENIORITY_CODE
+LEFT JOIN FACTSET_DB.ref_v2.issue_type_map as imap on imap.issue_type_code = dmap.ISSUE_TYPE
+JOIN ENT_V1.ENT_ENTITY_COVERAGE ec ON dd.FACTSET_ENTITY_ID  = ec.FACTSET_ENTITY_ID 
+JOIN SYM_V1.SYM_SEC_ENTITY sse ON sse.FACTSET_ENTITY_ID = ec.FACTSET_ENTITY_ID
+JOIN FACTSET_DB.sym_v1.sym_coverage AS sc ON sc.FSYM_SECURITY_ID=sse.FSYM_ID
+JOIN FACTSET_DB.sym_v1.sym_ticker_region AS tr ON tr.fsym_id=sc.FSYM_ID
+WHERE dd.ACTIVE = TRUE
+AND 
+tr.ticker_region IN {}
+AND dd.REPORT_DATE >= '{}'
+ORDER BY dd.REPORT_DATE, dd.OS_AMOUNT DESC, dmap.ISSUE_TYPE, dmap.DEBT_DESC, dd.INSTRUMENT_DESCRIPTION DESC
+"""
+
+ISIN_BY_TICKER_DCS_QUERY = '''
+SELECT
+	tr.ticker_region,
+	isn.ISIN,
+	dd.ACTIVE,
+	MIN(dd.REPORT_DATE) AS FIRST_REPORT_DATE,
+	MAX(dd.REPORT_DATE) AS LAST_REPORT_DATE
+FROM FACTSET_DB.DCS_V2.DCS_DETAILS as dd
+--LEFT JOIN FACTSET_DB.SYM_V1.SYM_CUSIP c on c.fsym_id = dd.instrument_id
+LEFT JOIN FACTSET_DB.SYM_V1.SYM_ISIN isn on isn.fsym_id = dd.instrument_id
+LEFT JOIN FACTSET_DB.SYM_V1.SYM_BBG bbg on bbg.fsym_id = dd.instrument_id
+LEFT JOIN FACTSET_DB.REF_V2.DCS_DEBT_MAP as dmap
+  ON dd.debt_code = dmap.debt_code
+LEFT JOIN FACTSET_DB.REF_V2.DCS_SENIORITY_MAP as dsmap
+  ON dsmap.SENIORITY_CODE = dmap.SENIORITY_CODE
+LEFT JOIN FACTSET_DB.ref_v2.issue_type_map as imap on imap.issue_type_code = dmap.ISSUE_TYPE
+JOIN ENT_V1.ENT_ENTITY_COVERAGE ec ON dd.FACTSET_ENTITY_ID  = ec.FACTSET_ENTITY_ID 
+JOIN SYM_V1.SYM_SEC_ENTITY sse ON sse.FACTSET_ENTITY_ID = ec.FACTSET_ENTITY_ID
+JOIN FACTSET_DB.sym_v1.sym_coverage AS sc ON sc.FSYM_SECURITY_ID=sse.FSYM_ID
+JOIN FACTSET_DB.sym_v1.sym_ticker_region AS tr ON tr.fsym_id=sc.FSYM_ID
+WHERE 
+dd.REPORT_DATE >= '{}'
+AND isn.ISIN IS NOT null
+AND {}
+GROUP BY tr.ticker_region,
+	isn.ISIN,
+	dd.ACTIVE
+'''

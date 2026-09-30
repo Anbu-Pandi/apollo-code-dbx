@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: ml_analytics
+Version: 0.0.0
+Summary: ml analytics libraries with neural forecasting and distributed processing
+Author: argus_admin
+Requires-Dist: ftfy
+Requires-Dist: scikit-learn
+Requires-Dist: neuralforecast>=1.6.0
+Requires-Dist: optuna>=3.0.0
+Requires-Dist: utilsforecast>=0.0.10
+Requires-Dist: xgboost>=1.7.0
+Requires-Dist: hmmlearn>=0.3.0
+Requires-Dist: torch>=1.13.0
+Requires-Dist: lightning>=2.0.0
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary

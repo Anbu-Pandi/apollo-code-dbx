@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: dash_reports
+Version: 0.0.0
+Summary: Market analytics dash reports with sub-servers (pred-tracker, cdx-options, teams)
+Author: argus_admin
+Requires-Dist: dash==2.18.1
+Requires-Dist: dash-ag-grid<36,>=33
+Requires-Dist: colour
+Requires-Dist: cufflinks
+Requires-Dist: elasticsearch
+Requires-Dist: dash-cytoscape
+Requires-Dist: dash-bootstrap-components
+Requires-Dist: dash_tabulator
+Requires-Dist: dash_extensions
+Requires-Dist: networkx
+Requires-Dist: flask==2.2.2
+Requires-Dist: werkzeug==2.2.3
+Requires-Dist: dash_okta_oauth2
+Requires-Dist: xlwings
+Requires-Dist: flask-sock
+Requires-Dist: websocket-client
+Requires-Dist: pyarrow
+Requires-Dist: fastapi<1.0,>=0.115
+Requires-Dist: starlette<1.0
+Requires-Dist: uvicorn[standard]
+Requires-Dist: aiohttp
+Requires-Dist: websockets
+Requires-Dist: python-dateutil
+Requires-Dist: filelock>=3.15
+Requires-Dist: tzdata
+Requires-Dist: cryptography==46.0.7
+Requires-Dist: pyOpenSSL==25.3.0
+Requires-Dist: certifi
+Requires-Dist: pip-system-certs
+Requires-Dist: waitress>=2.1.0
+Requires-Dist: setuptools<81,>=80.9
+Provides-Extra: wiki
+Requires-Dist: markdown>=3.5; extra == "wiki"
+Requires-Dist: bleach>=6.0; extra == "wiki"
+Dynamic: author
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary

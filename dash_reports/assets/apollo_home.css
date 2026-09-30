@@ -1,0 +1,180 @@
+/* =====================================================================
+   Apollo home page — Argus landing card grid.
+   Palette and type scale lifted from argus_wiki/themes/apollo.css so the
+   dash_reports landing matches the Argus Wiki visual language.
+   ===================================================================== */
+
+:root {
+  --apollo-green: #007B63;
+  --apollo-green-dark: #005A48;
+  --saxe-blue: #395878;
+  --grey: #55585A;
+  --orange: #EC9A5F;
+  --ecru: #CAC2BA;
+  --light-grey: #F2F2F2;
+  --border-light: #E5E0DB;
+  --section-bg: #EDF5F3;
+  --surface: #FFFFFF;
+  --text: #1a1a1a;
+  --text-secondary: #5a5d5f;
+  /* Corporate font: Graphik (today.apollo.com). Not self-hosted — licensed
+     font — so it falls back gracefully; picks up if installed/served later. */
+  --sans: "Graphik", "Graphik Web", "Segoe UI", Calibri, Helvetica, Arial, sans-serif;
+}
+
+.apollo-home {
+  font-family: var(--sans);
+  color: var(--text);
+  /* Left-aligned at the SAME 24px gutter as the masthead so the wordmark and
+     the content line up. The app is full-width/left-aligned (not centered), so
+     margin:0; the max-width just caps the card measure on very wide screens. */
+  padding: 20px 24px 56px;
+  max-width: 1480px;
+  margin: 0;
+  background: transparent;
+}
+
+/* Intro lede under the masthead — a single line, then a hairline rule that
+   separates it from the card grid. No competing header. */
+.apollo-home .hero {
+  padding: 2px 0 18px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-light, #E5E0DB);
+}
+.apollo-home .hero-inner { max-width: 900px; }
+
+.apollo-home .hero-sub {
+  font-size: 15px;
+  color: var(--text-secondary, #5a5d5f);
+  margin: 0;
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+.apollo-home .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  align-items: start;   /* cards size to their own content — no empty stretch */
+}
+
+.apollo-home .section {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-top: 3px solid var(--apollo-green);
+  border-radius: 6px;
+  padding: 18px 20px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.apollo-home .section.tone-accent {
+  border-top-color: var(--saxe-blue);
+}
+
+.apollo-home .section.tone-warn {
+  border-top-color: var(--orange);
+}
+
+.apollo-home .section-title {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--apollo-green);
+  margin: 0 0 2px;
+}
+
+.apollo-home .section.tone-accent .section-title {
+  color: var(--saxe-blue);
+}
+
+.apollo-home .section.tone-warn .section-title {
+  color: var(--orange);
+}
+
+.apollo-home .section-sub {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.apollo-home .link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.apollo-home .link-row {
+  display: flex;
+  flex-direction: column;
+  padding: 7px 9px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--text);
+  border-left: 2px solid transparent;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.apollo-home .link-row:hover {
+  background: var(--section-bg);
+  border-left-color: var(--apollo-green);
+  text-decoration: none;
+}
+
+.apollo-home .link-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+.apollo-home .link-blurb {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+  line-height: 1.35;
+}
+
+.apollo-home .link-row .badge {
+  display: inline-block;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--apollo-green);
+  background: var(--section-bg);
+  padding: 1px 6px;
+  border-radius: 3px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.apollo-home a:hover .link-title {
+  color: var(--apollo-green-dark);
+}
+
+.apollo-home .footer {
+  margin-top: 28px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light);
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+}
+
+.apollo-home .footer a {
+  color: var(--apollo-green);
+  text-decoration: none;
+}
+
+.apollo-home .footer a:hover {
+  text-decoration: underline;
+}

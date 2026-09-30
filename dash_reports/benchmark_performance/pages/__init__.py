@@ -1,0 +1,1 @@
+from dash_reports.benchmark_performance.pages import perf_page

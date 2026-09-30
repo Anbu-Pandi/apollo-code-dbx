@@ -1,0 +1,231 @@
+/* =====================================================================
+   Genie Admin — shared design system for the GenAI observability pages
+   (Reliability Radar + Conversation Explorer). Central + class-based so the
+   look is uniform and lives here, not inline in Python. Palette reuses the
+   apollo_home.css :root variables so it matches the rest of the site.
+   Minimal / Google-Tesla clean: white surface, thin borders, one green accent.
+   ===================================================================== */
+
+:root {
+  --sev-critical: #C0392B;
+  --sev-high:     #E67E22;
+  --sev-medium:   #C99A2E;
+  --sev-low:      #395878;
+  --sev-unknown:  #8A8D8F;
+  --cls-system:   #395878;
+  --cls-agent:    #007B63;
+  --cls-user:     #8A8D8F;
+}
+
+.genie-page {
+  font-family: var(--sans, "Segoe UI", Calibri, Helvetica, Arial, sans-serif);
+  color: var(--text, #1a1a1a);
+  background: var(--surface, #fff);
+  padding: 24px clamp(18px, 3vw, 40px) 44px;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+/* hero */
+.genie-hero { border-left: 4px solid var(--apollo-green); padding: 4px 0 4px 16px; }
+.genie-eyebrow {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--apollo-green); font-weight: 600;
+}
+.genie-title { font-size: 26px; font-weight: 600; letter-spacing: -0.01em; margin: 3px 0; }
+.genie-sub { font-size: 13.5px; color: var(--text-secondary); max-width: 760px; line-height: 1.5; }
+
+/* internal sub-nav (single-entry Genie Admin, switch views) */
+.genie-subnav { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0 8px; }
+.genie-tab {
+  text-decoration: none; padding: 7px 15px; border-radius: 5px; font-size: 13px;
+  font-weight: 600; color: var(--text-secondary); background: transparent;
+  border: 1px solid var(--border-light); transition: all 120ms ease;
+}
+.genie-tab:hover { border-color: var(--apollo-green); color: var(--apollo-green); text-decoration: none; }
+.genie-tab.active { color: #fff; background: var(--apollo-green); border-color: var(--apollo-green); }
+
+/* layout */
+.genie-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; }
+
+/* panels */
+.genie-panel {
+  background: var(--surface); border: 1px solid var(--border-light);
+  border-top: 3px solid var(--apollo-green); border-radius: 6px; padding: 16px 18px 14px;
+}
+.genie-panel.accent-blue { border-top-color: var(--saxe-blue); }
+.genie-panel.accent-orange { border-top-color: var(--orange); }
+.genie-panel-title {
+  font-size: 13px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--apollo-green);
+}
+.genie-panel.accent-blue .genie-panel-title { color: var(--saxe-blue); }
+.genie-panel-sub { font-size: 12px; color: var(--text-secondary); margin: 1px 0 12px; }
+
+/* KPI cards */
+.genie-kpis { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 16px; }
+.genie-kpi {
+  flex: 1 1 150px; min-width: 150px; background: var(--surface);
+  border: 1px solid var(--border-light); border-top: 3px solid var(--apollo-green);
+  border-radius: 6px; padding: 15px 18px 13px;
+}
+.genie-kpi.a-blue { border-top-color: var(--saxe-blue); }
+.genie-kpi.a-orange { border-top-color: var(--orange); }
+.genie-kpi.a-red { border-top-color: var(--sev-critical); }
+.genie-kpi.a-grey { border-top-color: var(--sev-unknown); }
+.genie-kpi-value { font-size: 28px; font-weight: 600; line-height: 1.05; color: var(--text); }
+.genie-kpi-label {
+  font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;
+  font-weight: 700; margin-top: 8px; color: var(--apollo-green);
+}
+.genie-kpi.a-blue .genie-kpi-label { color: var(--saxe-blue); }
+.genie-kpi.a-orange .genie-kpi-label { color: var(--orange); }
+.genie-kpi.a-red .genie-kpi-label { color: var(--sev-critical); }
+.genie-kpi.a-grey .genie-kpi-label { color: var(--sev-unknown); }
+.genie-kpi-sub { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+
+/* chips */
+.genie-chip {
+  display: inline-block; border-radius: 4px; padding: 2px 8px; font-size: 10px;
+  font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
+}
+.sev-critical { color: var(--sev-critical); background: rgba(192,57,43,0.12); border: 1px solid rgba(192,57,43,0.35); }
+.sev-high { color: var(--sev-high); background: rgba(230,126,34,0.12); border: 1px solid rgba(230,126,34,0.35); }
+.sev-medium { color: var(--sev-medium); background: rgba(201,154,46,0.12); border: 1px solid rgba(201,154,46,0.35); }
+.sev-low { color: var(--sev-low); background: rgba(57,88,120,0.12); border: 1px solid rgba(57,88,120,0.35); }
+.sev-unknown { color: var(--sev-unknown); background: rgba(138,141,143,0.12); border: 1px solid rgba(138,141,143,0.3); }
+.cls-system { color: var(--cls-system); background: rgba(57,88,120,0.12); }
+.cls-agent { color: var(--cls-agent); background: rgba(0,123,99,0.12); }
+.cls-user { color: var(--cls-user); background: rgba(138,141,143,0.12); }
+
+/* controls */
+.genie-btn {
+  background: var(--apollo-green); border: none; color: #fff; font-weight: 600;
+  border-radius: 6px; padding: 10px 22px; cursor: pointer; font-size: 13px;
+}
+.genie-btn:hover { background: var(--apollo-green-dark); }
+.genie-input {
+  background: #fff; border: 1px solid var(--border-light); color: var(--text);
+  border-radius: 6px; padding: 10px 14px; font-size: 13px;
+}
+.genie-input:focus { outline: none; border-color: var(--apollo-green); }
+
+/* table */
+.genie-table { width: 100%; border-collapse: collapse; }
+.genie-table th {
+  text-align: left; color: var(--text-secondary); font-size: 10.5px; letter-spacing: 0.06em;
+  text-transform: uppercase; font-weight: 700; padding: 0 12px 10px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.genie-table td {
+  padding: 10px 12px 10px 0; vertical-align: top; font-size: 12px; color: var(--text);
+  border-bottom: 1px solid #F0EDE9;
+}
+.genie-table tbody tr:hover { background: var(--section-bg); }
+.genie-mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.genie-muted { color: var(--text-secondary); }
+.genie-suggest { color: var(--apollo-green-dark); }
+.genie-conv-link {
+  display: inline-block; margin-top: 8px; color: var(--apollo-green); font-size: 11.5px;
+  font-weight: 600; text-decoration: none;
+}
+.genie-conv-link:hover { color: var(--apollo-green-dark); text-decoration: underline; }
+
+/* attention strip */
+.genie-attn { display: flex; gap: 14px; flex-wrap: wrap; }
+.genie-attn-card {
+  flex: 1 1 260px; min-width: 240px; background: var(--surface);
+  border: 1px solid var(--border-light); border-left: 3px solid var(--sev-high);
+  border-radius: 6px; padding: 14px 16px;
+}
+.genie-attn-card.crit { border-left-color: var(--sev-critical); }
+
+/* conversation replay bubbles */
+.genie-bubble { border: 1px solid var(--border-light); border-radius: 8px; padding: 10px 14px; margin: 4px 0; }
+.genie-bubble.user { background: var(--section-bg); }
+.genie-bubble.genie { background: #fff; }
+.genie-bubble-who { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; margin-bottom: 4px; }
+.genie-bubble.user .genie-bubble-who { color: var(--saxe-blue); }
+.genie-bubble.genie .genie-bubble-who { color: var(--apollo-green); }
+.genie-bubble-text { font-size: 13px; white-space: pre-wrap; line-height: 1.45; color: var(--text); }
+
+/* markdown-rendered conversation turns */
+.genie-md { font-size: 13px; line-height: 1.5; color: var(--text); }
+.genie-md p { margin: 0 0 8px; }
+.genie-md p:last-child { margin-bottom: 0; }
+.genie-md h1, .genie-md h2, .genie-md h3 { font-size: 14px; font-weight: 600; margin: 10px 0 6px; color: var(--text); }
+.genie-md ul, .genie-md ol { margin: 4px 0 8px; padding-left: 20px; }
+.genie-md li { margin: 2px 0; }
+.genie-md a { color: var(--apollo-green); text-decoration: none; }
+.genie-md a:hover { text-decoration: underline; }
+.genie-md code { background: var(--light-grey); padding: 1px 5px; border-radius: 3px; font-size: 12px; }
+.genie-md pre { background: var(--light-grey); padding: 10px; border-radius: 6px; overflow-x: auto; border: 1px solid var(--border-light); }
+.genie-md pre code { background: none; padding: 0; }
+.genie-md table { border-collapse: collapse; margin: 6px 0; font-size: 12px; }
+.genie-md th, .genie-md td { border: 1px solid var(--border-light); padding: 5px 9px; text-align: left; }
+.genie-md th { background: var(--section-bg); font-weight: 600; }
+.genie-md blockquote { border-left: 3px solid var(--border-light); margin: 6px 0; padding: 2px 12px; color: var(--text-secondary); }
+.genie-code {
+  background: var(--light-grey); color: #1a3a34; padding: 10px; border-radius: 6px;
+  font-size: 11px; overflow-x: auto; white-space: pre-wrap; border: 1px solid var(--border-light);
+}
+.genie-note { color: var(--text-secondary); font-size: 12px; padding: 26px 6px; text-align: center; line-height: 1.5; }
+
+/* conversation explorer: search + results + detail */
+.genie-searchbar { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0 6px; }
+.genie-result {
+  display: block; width: 100%; text-align: left; cursor: pointer; background: #fff;
+  border: 1px solid var(--border-light); border-radius: 6px; padding: 12px 16px;
+  margin-bottom: 10px; font-family: var(--sans); transition: all 120ms ease;
+}
+.genie-result:hover { background: var(--section-bg); border-color: var(--apollo-green); }
+.genie-result .rq { font-size: 13px; font-weight: 600; color: var(--text); }
+.genie-result .rr { font-size: 12px; color: var(--text-secondary); margin-top: 3px; }
+.genie-detail { background: #fff; border: 1px solid var(--border-light); border-radius: 6px; padding: 18px 20px; }
+.genie-detail-head { border-bottom: 1px solid var(--border-light); padding-bottom: 12px; }
+.genie-turn { border-bottom: 1px solid #F0EDE9; padding: 12px 0; }
+.genie-stat b { font-size: 15px; font-weight: 700; color: var(--text); }
+.genie-stat span { font-size: 11px; color: var(--text-secondary); }
+.genie-footer {
+  color: var(--text-secondary); font-size: 11px; margin-top: 22px; text-align: center;
+  border-top: 1px solid var(--border-light); padding-top: 16px;
+}
+
+/* =====================================================================
+   AG Grid theme — "ag-theme-genie" layered on ag-theme-quartz. Maps AG Grid's
+   CSS variables onto the Apollo palette so every grid matches the site.
+   Applied centrally via make_dash_table (read-only tables).
+   ===================================================================== */
+.ag-theme-genie {
+  --ag-font-family: var(--sans, "Segoe UI", Calibri, Helvetica, Arial, sans-serif);
+  --ag-font-size: 12px;
+  --ag-foreground-color: var(--text, #1a1a1a);
+  --ag-background-color: #ffffff;
+  --ag-header-background-color: var(--section-bg, #EDF5F3);
+  --ag-header-foreground-color: var(--apollo-green, #007B63);
+  --ag-header-height: 38px;
+  --ag-border-color: var(--border-light, #E5E0DB);
+  --ag-row-border-color: #F0EDE9;
+  --ag-odd-row-background-color: #FBFAF9;
+  --ag-row-hover-color: var(--section-bg, #EDF5F3);
+  --ag-selected-row-background-color: rgba(0,123,99,0.08);
+  --ag-active-color: var(--apollo-green, #007B63);
+  --ag-range-selection-border-color: var(--apollo-green, #007B63);
+  --ag-input-focus-border-color: var(--apollo-green, #007B63);
+  --ag-wrapper-border-radius: 6px;
+  --ag-borders: solid 1px;
+  --ag-cell-horizontal-padding: 12px;
+}
+.ag-theme-genie .ag-header-cell-text {
+  font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; font-size: 10.5px;
+}
+
+/* AG Grid toolbar (CSV export) */
+.genie-grid-wrap { width: 100%; }
+.genie-grid-toolbar { display: flex; justify-content: flex-end; margin-bottom: 6px; }
+.genie-grid-export {
+  background: #fff; color: var(--apollo-green); border: 1px solid var(--border-light);
+  border-radius: 5px; padding: 5px 12px; font-size: 11.5px; font-weight: 600; cursor: pointer;
+  font-family: var(--sans);
+}
+.genie-grid-export:hover { border-color: var(--apollo-green); background: var(--section-bg); }

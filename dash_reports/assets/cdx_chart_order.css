@@ -1,0 +1,9 @@
+.cdx-chart-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.cdx-chart-header h6 { flex: 1; margin: 0 !important; }
+.cdx-chart-drag, .cdx-chart-move { border: 1px solid #d9e2ec; border-radius: 5px; background: #f8fafd; color: #34475e; min-width: 28px; height: 28px; }
+.cdx-chart-drag { cursor: grab; font-size: 20px; }
+.cdx-chart-drag:active { cursor: grabbing; }
+.cdx-chart-drag:focus-visible, .cdx-chart-move:focus-visible { outline: 2px solid #006d77; outline-offset: 2px; }
+.cdx-chart-dragging { opacity: .5; outline: 2px dashed #006d77; }
+.cdx-chart-order-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; color: #65758b; font-size: 12px; margin-bottom: 12px; }
+#cdx-chart-order-status { color: #1b7a3d; }

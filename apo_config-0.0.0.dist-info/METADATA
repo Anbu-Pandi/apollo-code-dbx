@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: apo_config
+Version: 0.0.0
+Summary: apo configs
+Author: argus_admin
+Requires-Dist: jaydebeapi
+Requires-Dist: pyodbc
+Requires-Dist: cryptography==46.0.7
+Requires-Dist: databricks-sql-connector==2.9.6
+Requires-Dist: databricks-sdk==0.34.0
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary
